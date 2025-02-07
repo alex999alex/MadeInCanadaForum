@@ -96,3 +96,4 @@ C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\obj\Debug\net9
 C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\obj\Debug\net9.0\MadeInCanadaForum.pdb
 C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\obj\Debug\net9.0\MadeInCanadaForum.genruntimeconfig.cache
 C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\obj\Debug\net9.0\ref\MadeInCanadaForum.dll
+C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\obj\Debug\net9.0\MadeInCanadaForum.sourcelink.json

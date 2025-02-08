@@ -1,5 +1,24 @@
-﻿@{
+﻿@model List<MadeInCanadaForum.Models.Discussion>
+
+@{
+    // code block
     ViewData["Title"] = "Home Page";
 }
 
 <h1>All discussions</h1>
+
+@foreach (var item in Model)
+{
+    <h2>@item.Title</h2>
+    <p>
+        @item.DiscussionId <br />
+        @item.Content <br />
+        @item.CreateDate <br />
+        @item.ImageFilename <br />
+        <a asp-controller="Home" asp-action="DiscussionDetails" asp-route-id="@item.DiscussionId">Display discussion</a>
+
+
+    </p>
+
+}
+ 

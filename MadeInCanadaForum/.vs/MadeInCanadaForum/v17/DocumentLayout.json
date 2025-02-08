@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\models\\discussion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\models\\discussion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\views\\home\\discussiondetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\views\\home\\discussiondetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\models\\discussion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\models\\discussion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 169,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,40 +62,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DiscussionDetails.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-07T00:43:48.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Models\\Comment.cs",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Models\\Comment.cs",
               "RelativeToolTip": "MadeInCanadaForum\\Models\\Comment.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T00:00:32.086Z"
+              "WhenOpened": "2025-02-07T00:00:32.086Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Discussion.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Models\\Discussion.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Models\\Discussion.cs",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Models\\Discussion.cs",
               "RelativeToolTip": "MadeInCanadaForum\\Models\\Discussion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T23:47:28.173Z"
+              "WhenOpened": "2025-02-06T23:47:28.173Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -111,26 +113,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\HomeController.cs",
               "RelativeToolTip": "MadeInCanadaForum\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-06T23:18:18.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-06T22:59:05.872Z",
               "EditorCaption": ""

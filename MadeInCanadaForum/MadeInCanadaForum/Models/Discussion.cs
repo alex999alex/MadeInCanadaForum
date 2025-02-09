@@ -7,19 +7,26 @@ namespace MadeInCanadaForum.Models
     {
         // Primary key
         public int DiscussionId { get; set; }
-
-        public string Title { get; set; } = string.Empty;
-
         public string Content { get; set; } = string.Empty;
 
-        [Display(Name = "Date Created")]
-        public DateTime CreateDate { get;set; }
+
+        public string Location { get; set; } = string.Empty;
+
+        public string Camera { get; set; } = string.Empty;
 
         public string ImageFilename { get; set; } = string.Empty;
 
-        [Display(Name = "Discussion Visibility")]
+        [Display(Name = "Visibility")]
 
-        public bool IsPublic { get; set; } = false;
+        public bool IsVisible { get; set; } = false;
+
+
+        [Display(Name = "Date Created")]
+        public DateTime CreateDate { get; set; } = DateTime.Now;
+
+        //public string Title { get; set; } = string.Empty;
+
+
 
         //Navigation property
         public List<Comment>? Comments { get; set; } //nullable

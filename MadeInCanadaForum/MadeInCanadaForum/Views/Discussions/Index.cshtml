@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<MadeInCanadaForum.Models.Discussion>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Discussions";
 }
 
-<h1>My Discussions</h1>
+<h1>Discussions</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -12,18 +12,10 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Content)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Location)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Camera)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageFilename)
-            </th>
+            <th>Image</th>
+            <th>Content</th>
+            <th>Location</th>
+            <th>Camera</th>
             <th>
                 @Html.DisplayNameFor(model => model.IsVisible)
             </th>
@@ -34,32 +26,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Location)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Camera)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageFilename)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsVisible)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreateDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DiscussionId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DiscussionId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DiscussionId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImageFilename))
+                    {
+                        <img src="~/photos/@item.ImageFilename" alt="Discussion Image" style="width: 100px; height: auto;" />
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Camera)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsVisible)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreateDate)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.DiscussionId">View</a> |
+                    <a asp-action="Edit" asp-route-id="@item.DiscussionId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.DiscussionId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

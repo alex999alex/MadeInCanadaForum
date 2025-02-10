@@ -27,18 +27,18 @@
                 <input asp-for="Camera" class="form-control" />
                 <span asp-validation-for="Camera" class="text-danger"></span>
             </div>
-            @* <div class="mb-3"> *@
-            @*     <label asp-for="ImageFilename" class="control-label"></label> *@
-            @*     <input asp-for="ImageFilename" class="form-control" /> *@
-            @*     <span asp-validation-for="ImageFilename" class="text-danger"></span> *@
-            @* </div> *@
+            <div class="mb-3"> 
+                <label asp-for="ImageFile" class="control-label"></label> 
+                <input asp-for="ImageFile" class="form-control" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
             <div class="mb-3 form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="IsVisible" /> @Html.DisplayNameFor(model => model.IsVisible)
                 </label>
             </div>
-            @* <div class="mb-3"> *@
-            @*     <label asp-for="CreateDate" class="control-label"></label> *@
+            @* <div class="mb-3">
+            @*     <label asp-for="CreateDate" class="control-label"></label>
             @*     <input asp-for="CreateDate" class="form-control" /> *@
             @*     <span asp-validation-for="CreateDate" class="text-danger"></span> *@
             @* </div> *@

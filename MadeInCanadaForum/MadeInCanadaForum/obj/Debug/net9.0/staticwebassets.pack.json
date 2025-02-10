@@ -257,6 +257,22 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\0a9ec49e-9968-46a1-af4d-c83f907297e9.jpeg",
+      "PackagePath": "staticwebassets\\photos\\0a9ec49e-9968-46a1-af4d-c83f907297e9.jpeg"
+    },
+    {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\7dd15815-4382-43ee-9115-18c4ed1b6234.webp",
+      "PackagePath": "staticwebassets\\photos\\7dd15815-4382-43ee-9115-18c4ed1b6234.webp"
+    },
+    {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\be1f3a00-f5e5-40d8-b08e-f038dba09c3c.webp",
+      "PackagePath": "staticwebassets\\photos\\be1f3a00-f5e5-40d8-b08e-f038dba09c3c.webp"
+    },
+    {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\f7b1df62-5b4c-4f2f-b5bc-88337fd9c952.webp",
+      "PackagePath": "staticwebassets\\photos\\f7b1df62-5b4c-4f2f-b5bc-88337fd9c952.webp"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MadeInCanadaForum.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

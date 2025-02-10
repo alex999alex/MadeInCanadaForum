@@ -1,6 +1,8 @@
 
+using MadeInCanadaForum.Data;
 using MadeInCanadaForum.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 //using Microsoft.EntityFrameworkCore;
 //using MadeInCanadaForum.Data;
 
@@ -8,17 +10,18 @@ namespace MadeInCanadaForum.Controllers
 {
     public class HomeController : Controller
     {
-
-        public HomeController()
+        private readonly MadeInCanadaForumContext _context;
+        public HomeController(MadeInCanadaForumContext context)
         {
-
+            _context = context;
         }
 
         //Home page - all discussions - ../ or ../Home/Index
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             // get a list of all discussions from database
-            List<Discussion> discussions = new List<Discussion>();
+            //List<Discussion> discussions = new List<Discussion>();
+            var discussions = await _context.Discussion.ToListAsync();
 
 
 
@@ -56,19 +59,34 @@ namespace MadeInCanadaForum.Controllers
         }
 
         //Discussion Page - one discussion - ../Home/DiscussionDetails/id
-        public IActionResult DiscussionDetails(int id)
+        public async Task<IActionResult> DiscussionDetails(int? id)
         {
-            // get the discussion from database
-            Discussion discussion = new Discussion();
+            //// get the discussion from database
+            //Discussion discussion = new Discussion();
 
-            //discussion.DiscussionId = id;
-            ////discussion.Title = "Can we all share Made in Canada products?";
-            //discussion.Content = "While we shop at any Costco location, can we all keep sharing Made in Canada products. Yes we can look it up while we shop, but if we have something handy, don¡¯t you think it will be handy? https://www.reddit.com/r/CostcoCanada/comments/1ifm558/can_we_all_share_made_in_canada_products/";
-            //discussion.CreateDate = DateTime.Now;
-            //discussion.ImageFilename = "madeInCanada.svg";
-            //discussion.IsVisible = true;
+            ////discussion.DiscussionId = id;
+            //////discussion.Title = "Can we all share Made in Canada products?";
+            ////discussion.Content = "While we shop at any Costco location, can we all keep sharing Made in Canada products. Yes we can look it up while we shop, but if we have something handy, don¡¯t you think it will be handy? https://www.reddit.com/r/CostcoCanada/comments/1ifm558/can_we_all_share_made_in_canada_products/";
+            ////discussion.CreateDate = DateTime.Now;
+            ////discussion.ImageFilename = "madeInCanada.svg";
+            ////discussion.IsVisible = true;
 
-            // Pass the discussion to the view
+            //// Pass the discussion to the view
+            //return View(discussion);
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // get the discussion by id from database
+            var discussion = await _context.Discussion.FirstOrDefaultAsync(m => m.DiscussionId == id);
+            //var discussion = await _context.Discussion.FindAsync(id);
+            if (discussion == null)
+            {
+                return NotFound();
+            }
+
             return View(discussion);
         }
 

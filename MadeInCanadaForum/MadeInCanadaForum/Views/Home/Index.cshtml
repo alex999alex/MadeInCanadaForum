@@ -5,20 +5,36 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>All discussions</h1>
+@* <h1>All discussions</h1> *@
 
-@foreach (var item in Model)
-{
-    @* <h2>@item.Title</h2> *@
-    <p>
-        @item.DiscussionId <br />
-        @item.Content <br />
-        @item.CreateDate <br />
-        @item.ImageFilename <br />
-        <a asp-controller="Home" asp-action="DiscussionDetails" asp-route-id="@item.DiscussionId">Display discussion</a>
+@* @foreach (var item in Model) *@
+@* { *@
+@*     @* <h2>@item.Title</h2> *@ 
+@*     <p> *@
+@*         @item.DiscussionId <br /> *@
+@*         @item.Content <br /> *@
+@*         @item.CreateDate <br /> *@
+@*         @item.ImageFilename <br /> *@
+@*         <a asp-controller="Home" asp-action="DiscussionDetails" asp-route-id="@item.DiscussionId">Display discussion</a> *@
 
 
-    </p>
+@*     </p> *@
 
-}
+@* } *@
+
+<h1 class="fw-bold">Made In Canada</h1>
+<p>Buy Local</p>
+
+<div class="masonry-grid">
+    @foreach (var item in Model)
+    {
+        string imageUrl = Url.Content("/photos/" + item.ImageFilename);
+
+        <div class="masonry-grid-item">
+            <a href="@Url.Action("DiscussionDetails", "Home", new { id = item.DiscussionId })">
+                <img src="@imageUrl" class="img-fluid" alt="@item.Content" />
+            </a>
+        </div>
+    }
+</div>
  

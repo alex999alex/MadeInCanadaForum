@@ -22,7 +22,8 @@ namespace MadeInCanadaForum.Controllers
         // GET: Discussions
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Discussion.ToListAsync());
+            var discussions = await _context.Discussion.ToListAsync();
+            return View(discussions);
         }
 
         // GET: Discussions/Details/5
@@ -33,8 +34,8 @@ namespace MadeInCanadaForum.Controllers
                 return NotFound();
             }
 
-            //var discussion = await _context.Discussion.FirstOrDefaultAsync(m => m.DiscussionId == id);
-            var discussion = await _context.Discussion.FindAsync(id);
+            var discussion = await _context.Discussion.FirstOrDefaultAsync(m => m.DiscussionId == id);
+            //var discussion = await _context.Discussion.FindAsync(id);
             if (discussion == null)
             {
                 return NotFound();
@@ -54,12 +55,31 @@ namespace MadeInCanadaForum.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
+        //public async Task<IActionResult> Create([Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
+        public async Task<IActionResult> Create([Bind("DiscussionId,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] Discussion discussion)
         {
+
+            // rename the uploaded file to a guid (unique filename). Set before discussion saved in database.
+            discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile?.FileName);
+
+
             if (ModelState.IsValid)
             {
                 _context.Add(discussion);
                 await _context.SaveChangesAsync();
+
+                // Save the uploaded file after the discussion is saved in the database.
+                if (discussion.ImageFile != null)
+                {
+                    string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "photos", discussion.ImageFilename);
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await discussion.ImageFile.CopyToAsync(fileStream);
+                    }
+                }
+
+
+
 
                 // re-direct to the Index action
                 return RedirectToAction(nameof(Index));
@@ -89,7 +109,8 @@ namespace MadeInCanadaForum.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
+        //public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
+        public async Task<IActionResult> Edit(int id,  Discussion discussion)
         {
             if (id != discussion.DiscussionId)
             {

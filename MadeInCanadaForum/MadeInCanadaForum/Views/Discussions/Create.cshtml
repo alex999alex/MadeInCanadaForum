@@ -4,45 +4,45 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create Discussion</h1>
 
-<h4>Discussion</h4>
+@* <h4>Discussion</h4> *@
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="Content" class="control-label"></label>
                 <input asp-for="Content" class="form-control" />
                 <span asp-validation-for="Content" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="Location" class="control-label"></label>
                 <input asp-for="Location" class="form-control" />
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label asp-for="Camera" class="control-label"></label>
                 <input asp-for="Camera" class="form-control" />
                 <span asp-validation-for="Camera" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ImageFilename" class="control-label"></label>
-                <input asp-for="ImageFilename" class="form-control" />
-                <span asp-validation-for="ImageFilename" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
+            @* <div class="mb-3"> *@
+            @*     <label asp-for="ImageFilename" class="control-label"></label> *@
+            @*     <input asp-for="ImageFilename" class="form-control" /> *@
+            @*     <span asp-validation-for="ImageFilename" class="text-danger"></span> *@
+            @* </div> *@
+            <div class="mb-3 form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="IsVisible" /> @Html.DisplayNameFor(model => model.IsVisible)
                 </label>
             </div>
-            <div class="form-group">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+            @* <div class="mb-3"> *@
+            @*     <label asp-for="CreateDate" class="control-label"></label> *@
+            @*     <input asp-for="CreateDate" class="form-control" /> *@
+            @*     <span asp-validation-for="CreateDate" class="text-danger"></span> *@
+            @* </div> *@
+            <div class="mb-3">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

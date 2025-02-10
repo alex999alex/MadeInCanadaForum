@@ -46,38 +46,26 @@ namespace MadeInCanadaForum.Controllers
         //    return View(comment);
         //}
 
-        // GET: Comments/Create/5
-        public IActionResult Create(int? id)
+        // GET: Comments/Create
+        public IActionResult Create(int discussionId)
         {
-            //id is the DiscussionId
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            //ViewData["DiscussionId"] = new SelectList(_context.Discussion, "DiscussionId", "DiscussionId");
-            ViewData["DiscussionId"] = id;
-
+            ViewBag.DiscussionId = discussionId; // Pass the discussion ID to the view
             return View();
         }
 
         // POST: Comments/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CommentId,Content,DiscussionId")] Comment comment)
+        public async Task<IActionResult> Create([Bind("Content,DiscussionId")] Comment comment)
         {
             if (ModelState.IsValid)
             {
+                comment.CreateDate = DateTime.Now; // Set the creation date
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
-
-                // re-direct to ../discussions/edit/{DiscussionId}
-                return RedirectToAction("Edit", "Discussions", new { id = comment.DiscussionId });
+                return RedirectToAction("DiscussionDetails", "Home", new { id = comment.DiscussionId }); // Redirect to the discussion details page
             }
-            //ViewData["DiscussionId"] = new SelectList(_context.Discussion, "DiscussionId", "DiscussionId", comment.DiscussionId);
-            ViewData["DiscussionId"] = comment.DiscussionId;
+            ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID back to the view
             return View(comment);
         }
 
@@ -149,7 +137,7 @@ namespace MadeInCanadaForum.Controllers
             {
                 return NotFound();
             }
-            
+
             //delete the comment in database
             _context.Comment.Remove(comment);
             await _context.SaveChangesAsync();
@@ -161,7 +149,7 @@ namespace MadeInCanadaForum.Controllers
             return RedirectToAction("Edit", "Discussions", new { id = comment.DiscussionId });
         }
 
-        
+
 
 
 

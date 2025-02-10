@@ -55,13 +55,10 @@ namespace MadeInCanadaForum.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
         public async Task<IActionResult> Create([Bind("DiscussionId,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] Discussion discussion)
         {
-
             // rename the uploaded file to a guid (unique filename). Set before discussion saved in database.
             discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile?.FileName);
-
 
             if (ModelState.IsValid)
             {
@@ -77,9 +74,6 @@ namespace MadeInCanadaForum.Controllers
                         await discussion.ImageFile.CopyToAsync(fileStream);
                     }
                 }
-
-
-
 
                 // re-direct to the Index action
                 return RedirectToAction(nameof(Index));
@@ -110,7 +104,7 @@ namespace MadeInCanadaForum.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
-        public async Task<IActionResult> Edit(int id,  Discussion discussion)
+        public async Task<IActionResult> Edit(int id, Discussion discussion)
         {
             if (id != discussion.DiscussionId)
             {

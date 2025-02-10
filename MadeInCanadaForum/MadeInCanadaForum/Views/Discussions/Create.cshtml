@@ -27,14 +27,15 @@
                 <input asp-for="Camera" class="form-control" />
                 <span asp-validation-for="Camera" class="text-danger"></span>
             </div>
-            <div class="mb-3"> 
-                <label asp-for="ImageFile" class="control-label"></label> 
-                <input asp-for="ImageFile" class="form-control" />
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" type="file" class="form-control" />
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <div class="mb-3 form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsVisible" /> @Html.DisplayNameFor(model => model.IsVisible)
+                    <input class="form-check-input" asp-for="IsVisible" /> @Html.DisplayNameFor(model =>
+                    model.IsVisible)
                 </label>
             </div>
             @* <div class="mb-3">
@@ -54,5 +55,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

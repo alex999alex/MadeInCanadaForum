@@ -21,6 +21,31 @@
     }
 </div>
 
+<h4>Comments</h4>
+<hr />
+@foreach (var comment in Model.Comments)
+{
+    <div>
+        <p>@comment.Content</p>
+        <small>Posted on: @comment.CreateDate.ToString("g")</small>
+    </div>
+}
+
+<h4>Add a Comment</h4>
+<hr />
+<div>
+    <form asp-action="Create" asp-controller="Comments">
+        <input type="hidden" name="DiscussionId" value="@Model.DiscussionId" />
+        <div class="mb-3">
+            <label asp-for="Content" class="control-label"></label>
+            <textarea name="Content" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Post Comment" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
 <div>
     <a asp-action="Edit" asp-route-id="@Model.DiscussionId">Edit</a> |
     <a asp-action="Index">Back to List</a>

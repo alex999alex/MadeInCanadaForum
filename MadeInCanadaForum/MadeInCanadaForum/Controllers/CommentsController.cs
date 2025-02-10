@@ -63,64 +63,62 @@ namespace MadeInCanadaForum.Controllers
                 comment.CreateDate = DateTime.Now; // Set the creation date
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("DiscussionDetails", "Home", new { id = comment.DiscussionId }); // Redirect to the discussion details page
+                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); // Redirect to the discussion details page
             }
             ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID back to the view
             return View(comment);
         }
 
         // GET: Comments/Edit/5
-        //public async Task<IActionResult> Edit(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-        //    var comment = await _context.Comment.FindAsync(id);
-        //    if (comment == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    ViewData["DiscussionId"] = new SelectList(_context.Discussion, "DiscussionId", "DiscussionId", comment.DiscussionId);
-        //    return View(comment);
-        //}
+            var comment = await _context.Comment.FindAsync(id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+            ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID to the view
+            return View(comment);
+        }
 
         // POST: Comments/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(int id, [Bind("CommentId,Content,DiscussionId")] Comment comment)
-        //{
-        //    if (id != comment.CommentId)
-        //    {
-        //        return NotFound();
-        //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("CommentId,Content,DiscussionId")] Comment comment)
+        {
+            if (id != comment.CommentId)
+            {
+                return NotFound();
+            }
 
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            _context.Update(comment);
-        //            await _context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateConcurrencyException)
-        //        {
-        //            if (!CommentExists(comment.CommentId))
-        //            {
-        //                return NotFound();
-        //            }
-        //            else
-        //            {
-        //                throw;
-        //            }
-        //        }
-        //        return RedirectToAction(nameof(Index));
-        //    }
-        //    ViewData["DiscussionId"] = new SelectList(_context.Discussion, "DiscussionId", "DiscussionId", comment.DiscussionId);
-        //    return View(comment);
-        //}
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(comment);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CommentExists(comment.CommentId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); // Redirect to the discussion details page
+            }
+            ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID back to the view
+            return View(comment);
+        }
 
         // GET: Comments/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -168,9 +166,9 @@ namespace MadeInCanadaForum.Controllers
         //    return RedirectToAction(nameof(Index));
         //}
 
-        //private bool CommentExists(int id)
-        //{
-        //    return _context.Comment.Any(e => e.CommentId == id);
-        //}
+        private bool CommentExists(int id)
+        {
+            return _context.Comment.Any(e => e.CommentId == id);
+        }
     }
 }

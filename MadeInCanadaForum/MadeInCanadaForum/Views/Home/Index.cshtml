@@ -1,4 +1,4 @@
-﻿@model List<MadeInCanadaForum.Models.Discussion>
+﻿@model IEnumerable<MadeInCanadaForum.Models.Discussion>
 
 @{
     // code block
@@ -25,17 +25,38 @@
 <h1 class="fw-bold">Made In Canada</h1>
 <p>Buy Local</p>
 
-<div class="masonry-grid">
+<h1>Discussions</h1>
+
+<p>
+    <a asp-action="Create" asp-controller="Discussions">Create New Discussion</a>
+</p>
+
+<div class="container">
     @foreach (var item in Model)
     {
-        string imageUrl = Url.Content("/photos/" + item.ImageFilename);
-
-        <div class="masonry-grid-item">
-            <a href="@Url.Action("DiscussionDetails", "Home", new { id = item.DiscussionId })">
-                <img src="@imageUrl" class="img-fluid" alt="@item.Content" />
-                <h2>@item.Title</h2> <!-- Display the Title here -->
-            </a>
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <a asp-controller="Discussions" asp-action="Details" asp-route-id="@item.DiscussionId" class="card-link">
+                    <div class="card discussion-card">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3 class="card-title display-4">@item.Title</h3>
+                                    <p class="card-text lead">@item.Content</p>
+                                    <p class="card-text"><small class="text-muted">Created on:
+                                            @item.CreateDate.ToString("g")</small></p>
+                                    <p class="card-text"><small class="text-muted">@item.Comments?.Count() ?? 0
+                                            comments</small></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="~/photos/@item.ImageFilename" alt="Discussion Image" class="img-thumbnail"
+                                    style="height: auto; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" />
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     }
 </div>
- 

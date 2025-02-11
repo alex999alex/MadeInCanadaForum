@@ -816,6 +816,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"whpcagl0t2"},{"Name":"integrity","Value":"sha256-FOZEPMBERjJdWnjdnxIrqkDpY8lEzrlasUr2UFVxx3o="},{"Name":"label","Value":"_content/MadeInCanadaForum/photos/7dd15815-4382-43ee-9115-18c4ed1b6234.webp"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"19662"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022FOZEPMBERjJdWnjdnxIrqkDpY8lEzrlasUr2UFVxx3o=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 02:22:17 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/photos/bad521e0-a76a-4435-b2c4-cb0a12aa3a96.enigmhyme5.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\bad521e0-a76a-4435-b2c4-cb0a12aa3a96.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"enigmhyme5"},{"Name":"integrity","Value":"sha256-ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU="},{"Name":"label","Value":"_content/MadeInCanadaForum/photos/bad521e0-a76a-4435-b2c4-cb0a12aa3a96.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6407"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Feb 2025 02:14:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/photos/bad521e0-a76a-4435-b2c4-cb0a12aa3a96.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\bad521e0-a76a-4435-b2c4-cb0a12aa3a96.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"6407"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Feb 2025 02:14:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/photos/be1f3a00-f5e5-40d8-b08e-f038dba09c3c.happz2cqbt.webp">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\be1f3a00-f5e5-40d8-b08e-f038dba09c3c.webp'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

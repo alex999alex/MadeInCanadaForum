@@ -34,8 +34,11 @@ namespace MadeInCanadaForum.Controllers
                 return NotFound();
             }
 
-            var discussion = await _context.Discussion.FirstOrDefaultAsync(m => m.DiscussionId == id);
-            //var discussion = await _context.Discussion.FindAsync(id);
+            // Include Comments when fetching the Discussion
+            var discussion = await _context.Discussion
+                .Include(d => d.Comments) // Include the Comments navigation property
+                .FirstOrDefaultAsync(m => m.DiscussionId == id);
+
             if (discussion == null)
             {
                 return NotFound();

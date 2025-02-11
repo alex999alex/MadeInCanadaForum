@@ -19,37 +19,10 @@ namespace MadeInCanadaForum.Controllers
             _context = context;
         }
 
-        // GET: Comments
-        //public async Task<IActionResult> Index()
-        //{
-        //    var madeInCanadaForumContext = _context.Comment.Include(c => c.Discussion);
-        //    return View(await madeInCanadaForumContext.ToListAsync());
-        //}
 
-        // GET: Comments/Details/5
-
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var comment = await _context.Comment
-        //        .Include(c => c.Discussion)
-        //        .FirstOrDefaultAsync(m => m.CommentId == id);
-        //    if (comment == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(comment);
-        //}
-
-        // GET: Comments/Create
         public IActionResult Create(int discussionId)
         {
-            ViewBag.DiscussionId = discussionId; // Pass the discussion ID to the view
+            ViewBag.DiscussionId = discussionId; 
             return View();
         }
 
@@ -60,12 +33,12 @@ namespace MadeInCanadaForum.Controllers
         {
             if (ModelState.IsValid)
             {
-                comment.CreateDate = DateTime.Now; // Set the creation date
+                comment.CreateDate = DateTime.Now; 
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); // Redirect to the discussion details page
+                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); 
             }
-            ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID back to the view
+            ViewData["DiscussionId"] = comment.DiscussionId; 
             return View(comment);
         }
 
@@ -82,7 +55,7 @@ namespace MadeInCanadaForum.Controllers
             {
                 return NotFound();
             }
-            ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID to the view
+            ViewData["DiscussionId"] = comment.DiscussionId; 
             return View(comment);
         }
 
@@ -114,9 +87,9 @@ namespace MadeInCanadaForum.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); // Redirect to the discussion details page
+                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); 
             }
-            ViewData["DiscussionId"] = comment.DiscussionId; // Pass the discussion ID back to the view
+            ViewData["DiscussionId"] = comment.DiscussionId; 
             return View(comment);
         }
 
@@ -141,30 +114,9 @@ namespace MadeInCanadaForum.Controllers
             await _context.SaveChangesAsync();
 
 
-            //return View(comment);
-
-            // re-direct to ../discussions/edit/{DiscussionId}
             return RedirectToAction("Edit", "Discussions", new { id = comment.DiscussionId });
         }
 
-
-
-
-
-        // POST: Comments/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var comment = await _context.Comment.FindAsync(id);
-        //    if (comment != null)
-        //    {
-        //        _context.Comment.Remove(comment);
-        //    }
-
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(Index));
-        //}
 
         private bool CommentExists(int id)
         {

@@ -33,34 +33,28 @@ namespace MadeInCanadaForum.Controllers
             {
                 return NotFound();
             }
-
-            // Include Comments when fetching the Discussion
             var discussion = await _context.Discussion
-                .Include(d => d.Comments) // Include the Comments navigation property
+                .Include(d => d.Comments)
                 .FirstOrDefaultAsync(m => m.DiscussionId == id);
-
             if (discussion == null)
             {
                 return NotFound();
             }
-
             return View(discussion);
         }
 
-        // GET: Discussions/Create
+
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Discussions/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+  
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DiscussionId,Title,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] Discussion discussion)
         {
-            // rename the uploaded file to a guid (unique filename). Set before discussion saved in database.
+  
             discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile?.FileName);
 
             if (ModelState.IsValid)
@@ -68,7 +62,7 @@ namespace MadeInCanadaForum.Controllers
                 _context.Add(discussion);
                 await _context.SaveChangesAsync();
 
-                // Save the uploaded file after the discussion is saved in the database.
+
                 if (discussion.ImageFile != null)
                 {
                     string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "photos", discussion.ImageFilename);
@@ -78,7 +72,7 @@ namespace MadeInCanadaForum.Controllers
                     }
                 }
 
-                // re-direct to the Index action
+
                 return RedirectToAction(nameof(Index));
             }
             return View(discussion);
@@ -92,7 +86,7 @@ namespace MadeInCanadaForum.Controllers
                 return NotFound();
             }
 
-            //var discussion = await _context.Discussion.FindAsync(id);
+
             var discussion = await _context.Discussion.Include("Comments").FirstOrDefaultAsync(m => m.DiscussionId == id);
             if (discussion == null)
             {
@@ -101,12 +95,10 @@ namespace MadeInCanadaForum.Controllers
             return View(discussion);
         }
 
-        // POST: Discussions/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Content,Location,Camera,ImageFilename,IsVisible,CreateDate")] Discussion discussion)
+
         public async Task<IActionResult> Edit(int id, Discussion discussion)
         {
             if (id != discussion.DiscussionId)

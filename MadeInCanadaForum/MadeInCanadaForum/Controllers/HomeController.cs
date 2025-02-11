@@ -2,8 +2,6 @@ using MadeInCanadaForum.Data;
 using MadeInCanadaForum.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-//using Microsoft.EntityFrameworkCore;
-//using MadeInCanadaForum.Data;
 
 namespace MadeInCanadaForum.Controllers
 {
@@ -15,7 +13,7 @@ namespace MadeInCanadaForum.Controllers
             _context = context;
         }
 
-        //Home page - all discussions - ../ or ../Home/Index
+
         public async Task<IActionResult> Index()
         {
             var discussions = await _context.Discussion
@@ -24,7 +22,7 @@ namespace MadeInCanadaForum.Controllers
             return View(discussions);
         }
 
-        //Discussion Page - one discussion - ../Home/DiscussionDetails/id
+
         public async Task<IActionResult> DiscussionDetails(int? id)
         {
             if (id == null)
@@ -32,7 +30,7 @@ namespace MadeInCanadaForum.Controllers
                 return NotFound();
             }
 
-            // get the discussion by id from database
+  
             var discussion = await _context.Discussion
                 .Include(d => d.Comments)
                 .FirstOrDefaultAsync(m => m.DiscussionId == id);
@@ -44,7 +42,7 @@ namespace MadeInCanadaForum.Controllers
             return View(discussion);
         }
 
-        //Privacy page
+
         public IActionResult Privacy()
         {
             return View();

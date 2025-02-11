@@ -1,35 +1,9 @@
 ﻿@model IEnumerable<MadeInCanadaForum.Models.Discussion>
 
 @{
-    // code block
     ViewData["Title"] = "Home Page";
 }
 
-@* <h1>All discussions</h1> *@
-
-@* @foreach (var item in Model) *@
-@* { *@
-@*     @* <h2>@item.Title</h2> *@ 
-@*     <p> *@
-@*         @item.DiscussionId <br /> *@
-@*         @item.Content <br /> *@
-@*         @item.CreateDate <br /> *@
-@*         @item.ImageFilename <br /> *@
-@*         <a asp-controller="Home" asp-action="DiscussionDetails" asp-route-id="@item.DiscussionId">Display discussion</a> *@
-
-
-@*     </p> *@
-
-@* } *@
-
-@* <h1 class="fw-bold">Made In Canada</h1> *@
-@* <p>Buy Local</p> *@
-
-@* <h1>Discussions</h1> *@
-
-@* <p> *@
-@*     <a asp-action="Create" asp-controller="Discussions">Create New Discussion</a> *@
-@* </p> *@
 
 <div class="container">
     @foreach (var item in Model)
@@ -42,7 +16,6 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h3 class="card-title display-4">@item.Title</h3>
-                                    @* <p class="card-text lead">@item.Content</p> *@
                                     <p class="card-text"><small class="text-muted">Created on:
                                             @item.CreateDate.ToString("g")</small></p>
                                     <p class="card-text"><small class="text-muted">@item.Comments?.Count() comments</small>

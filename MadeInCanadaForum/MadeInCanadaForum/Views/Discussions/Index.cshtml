@@ -22,13 +22,12 @@
                         <p class="card-text"><small class="text-muted">Created on: @item.CreateDate.ToString("g")</small>
                         </p>
                         <p class="card-text"><small class="text-muted">@item.Comments?.Count() ?? 0 comments</small></p>
-                        <img src="~/photos/@item.ImageFilename" alt="Discussion Image" class="img-thumbnail float-end"
-                            style="height: 100px; object-fit: cover;" />
                     </div>
                 </a>
             </div>
             <div class="col-md-4">
-                <!-- Removed the image from here -->
+                <img src="~/photos/@item.ImageFilename" alt="Discussion Image" class="img-thumbnail"
+                    style="height: 100px; object-fit: cover;" />
             </div>
         </div>
     }

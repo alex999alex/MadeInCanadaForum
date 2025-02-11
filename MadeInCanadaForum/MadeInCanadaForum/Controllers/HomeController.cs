@@ -18,7 +18,9 @@ namespace MadeInCanadaForum.Controllers
         //Home page - all discussions - ../ or ../Home/Index
         public async Task<IActionResult> Index()
         {
-            var discussions = await _context.Discussion.ToListAsync();
+            var discussions = await _context.Discussion
+                .Include(d => d.Comments)
+                .ToListAsync();
             return View(discussions);
         }
 
@@ -31,7 +33,9 @@ namespace MadeInCanadaForum.Controllers
             }
 
             // get the discussion by id from database
-            var discussion = await _context.Discussion.FirstOrDefaultAsync(m => m.DiscussionId == id);
+            var discussion = await _context.Discussion
+                .Include(d => d.Comments)
+                .FirstOrDefaultAsync(m => m.DiscussionId == id);
             if (discussion == null)
             {
                 return NotFound();

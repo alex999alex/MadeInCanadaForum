@@ -7,24 +7,26 @@
 <h1>@Model.Title</h1>
 
 <div>
-    <h4>Title</h4>
+    <p>Posted @Model.CreateDate</p>
+    @if (!string.IsNullOrEmpty(Model.ImageFilename))
+    {
+        @* <h4>Image</h4> *@
+        <img src="~/photos/@Model.ImageFilename" alt="Discussion Image" style="width: 300px; height: auto;" />
+    }
+    @* <h4>Title</h4>
     <hr />
     <p>@Model.Title</p>
     <hr />
-    <h4>Content</h4>
-    <hr />
+    <h4>Content</h4> *@
+    @* <hr /> *@
     <p>@Model.Content</p>
     @* <h4>Location</h4> *@
     @* <p>@Model.Location</p> *@
     @* <h4>Camera</h4> *@
     @* <p>@Model.Camera</p> *@
-    @if (!string.IsNullOrEmpty(Model.ImageFilename))
-    {
-        <h4>Image</h4>
-        <img src="~/photos/@Model.ImageFilename" alt="Discussion Image" style="width: 300px; height: auto;" />
-    }
-</div>
 
+</div>
+<hr />
 <h4>Comments</h4>
 <hr />
 @foreach (var comment in Model.Comments)
@@ -32,26 +34,27 @@
     <div>
         <p>@comment.Content</p>
         <small>Posted on: @comment.CreateDate.ToString("g")</small>
+        <hr />
     </div>
 }
 
-<h4>Add a Comment</h4>
-<hr />
+@* <h4>Add a Comment</h4> *@
+@* <hr /> *@
 <div>
     <form asp-action="Create" asp-controller="Comments">
         <input type="hidden" name="DiscussionId" value="@Model.DiscussionId" />
-        
+
         <div class="mb-3">
             <label asp-for="Content" class="control-label"></label>
             <textarea name="Content" class="form-control"></textarea>
         </div>
         <div class="mb-3">
-            <input type="submit" value="Post Comment" class="btn btn-primary" />
+            <input type="submit" value="Add Comment" class="btn btn-primary" />
         </div>
     </form>
 </div>
 
-<div>
+@* <div>
     <a asp-action="Edit" asp-route-id="@Model.DiscussionId">Edit</a> |
     <a asp-action="Index">Back to List</a>
-</div>
+</div> *@

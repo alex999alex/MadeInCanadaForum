@@ -31,7 +31,7 @@ namespace MadeInCanadaForum.Models
         public bool IsVisible { get; set; } = false;
 
 
-        [Display(Name = "Date Created")]
+        [Display(Name = "Posted")]
         public DateTime CreateDate { get; set; } = DateTime.Now;
 
 

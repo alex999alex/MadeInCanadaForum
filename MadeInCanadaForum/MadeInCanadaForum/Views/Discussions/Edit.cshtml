@@ -25,26 +25,26 @@
                 <input asp-for="Content" class="form-control" />
                 <span asp-validation-for="Content" class="text-danger"></span>
             </div>
-            <div class="mb-3">
-                <label asp-for="Location" class="control-label"></label>
-                <input asp-for="Location" class="form-control" />
-                <span asp-validation-for="Location" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="Camera" class="control-label"></label>
-                <input asp-for="Camera" class="form-control" />
-                <span asp-validation-for="Camera" class="text-danger"></span>
-            </div>
-            <div class="mb-3">
-                <label asp-for="ImageFilename" class="control-label"></label>
-                <input asp-for="ImageFilename" class="form-control" />
-                <span asp-validation-for="ImageFilename" class="text-danger"></span>
-            </div>
-            <div class="mb-3 form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsVisible" /> @Html.DisplayNameFor(model => model.IsVisible)
-                </label>
-            </div>
+            @* <div class="mb-3"> *@
+            @*     <label asp-for="Location" class="control-label"></label> *@
+            @*     <input asp-for="Location" class="form-control" /> *@
+            @*     <span asp-validation-for="Location" class="text-danger"></span> *@
+            @* </div> *@
+            @* <div class="mb-3"> *@
+            @*     <label asp-for="Camera" class="control-label"></label> *@
+            @*     <input asp-for="Camera" class="form-control" /> *@
+            @*     <span asp-validation-for="Camera" class="text-danger"></span> *@
+            @* </div> *@
+            @* <div class="mb-3"> *@
+            @*     <label asp-for="ImageFilename" class="control-label"></label> *@
+            @*     <input asp-for="ImageFilename" class="form-control" /> *@
+            @*     <span asp-validation-for="ImageFilename" class="text-danger"></span> *@
+            @* </div> *@
+            @* <div class="mb-3 form-check"> *@
+            @*     <label class="form-check-label"> *@
+            @*         <input class="form-check-input" asp-for="IsVisible" /> @Html.DisplayNameFor(model => model.IsVisible) *@
+            @*     </label> *@
+            @* </div> *@
             <div class="mb-3">
                 <label asp-for="CreateDate" class="control-label"></label>
                 <input asp-for="CreateDate" class="form-control" />
@@ -54,19 +54,19 @@
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
 
-            <div class="mb-3">
-                @* /Comments/Create/5 *@
-                <a asp-controller="Comments" asp-action="Create" asp-route-id="@Model.DiscussionId" class="me-2 btn btn-secondary">Add comment</a>
+            @* <div class="mb-3"> *@
+            @*     @* /Comments/Create/5 *@ 
+            @*     <a asp-controller="Comments" asp-action="Create" asp-route-id="@Model.DiscussionId" class="me-2 btn btn-secondary">Add comment</a> *@
 
-                @if (Model.Comments != null)
-                {
-                    foreach (var comment in Model.Comments)
-                    {
-                        <span class="badge rounded-pill text-bg-light pe-2">@comment.Content <a asp-controller="Comments" asp-action="Delete" asp-route-id="@comment.CommentId">x</a> </span>
-                    }
-                }
+            @*     @if (Model.Comments != null) *@
+            @*     { *@
+            @*         foreach (var comment in Model.Comments) *@
+            @*         { *@
+            @*             <span class="badge rounded-pill text-bg-light pe-2">@comment.Content <a asp-controller="Comments" asp-action="Delete" asp-route-id="@comment.CommentId">x</a> </span> *@
+            @*         } *@
+            @*     } *@
 
-            </div>
+            @* </div> *@
 
 
         </form>

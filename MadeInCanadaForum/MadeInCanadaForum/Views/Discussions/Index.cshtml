@@ -9,53 +9,26 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>Image</th>
-            <th>Content</th>
-            <th>Location</th>
-            <th>Camera</th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsVisible)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreateDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.ImageFilename))
-                    {
-                        <img src="~/photos/@item.ImageFilename" alt="Discussion Image" style="width: 100px; height: auto;" />
-                    }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Content)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Location)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Camera)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsVisible)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreateDate)
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.DiscussionId">View</a> |
-                    <a asp-action="Edit" asp-route-id="@item.DiscussionId">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@item.DiscussionId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <img src="~/photos/@item.ImageFilename" alt="Discussion Image" class="card-img-top"
+                        style="height: 200px; object-fit: cover;" />
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text">@item.Content</p>
+                        <p class="card-text"><small class="text-muted">Created on: @item.CreateDate.ToString("g")</small>
+                        </p>
+                        <p class="card-text"><small class="text-muted">@item.Comments?.Count() ?? 0 comments</small></p>
+                        <a asp-action="Details" asp-route-id="@item.DiscussionId" class="btn btn-primary">View
+                            Discussion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

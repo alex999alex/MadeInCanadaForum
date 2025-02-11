@@ -3,14 +3,14 @@
     <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8fylfCObixBV1JwJceomKf5VvEtgb4XX86CtOXD0nrc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1870"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228fylfCObixBV1JwJceomKf5VvEtgb4XX86CtOXD0nrc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 02:16:50 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-MY6k9Fnh09U/4F7j2UWpRmOUIklFiS8SzVGGIy9q\u002BKY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2219"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022MY6k9Fnh09U/4F7j2UWpRmOUIklFiS8SzVGGIy9q\u002BKY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Feb 2025 00:42:10 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/css/site.xoztfl07h7.css">
+    <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/css/site.hwy6c3mv7s.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xoztfl07h7"},{"Name":"integrity","Value":"sha256-8fylfCObixBV1JwJceomKf5VvEtgb4XX86CtOXD0nrc="},{"Name":"label","Value":"_content/MadeInCanadaForum/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1870"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00228fylfCObixBV1JwJceomKf5VvEtgb4XX86CtOXD0nrc=\u0022"},{"Name":"Last-Modified","Value":"Mon, 10 Feb 2025 02:16:50 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"hwy6c3mv7s"},{"Name":"integrity","Value":"sha256-MY6k9Fnh09U/4F7j2UWpRmOUIklFiS8SzVGGIy9q\u002BKY="},{"Name":"label","Value":"_content/MadeInCanadaForum/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2219"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022MY6k9Fnh09U/4F7j2UWpRmOUIklFiS8SzVGGIy9q\u002BKY=\u0022"},{"Name":"Last-Modified","Value":"Tue, 11 Feb 2025 00:42:10 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MadeInCanadaForum/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>

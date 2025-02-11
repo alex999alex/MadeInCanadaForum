@@ -34,6 +34,8 @@ namespace MadeInCanadaForum.Models
         [Display(Name = "Date Created")]
         public DateTime CreateDate { get; set; } = DateTime.Now;
 
+
+        [Display(Name = "Title")]
         public string Title { get; set; } = string.Empty;
 
 

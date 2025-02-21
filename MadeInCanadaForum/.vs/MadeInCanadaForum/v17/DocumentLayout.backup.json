@@ -154,7 +154,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:17.895Z"
+              "WhenOpened": "2025-02-11T03:49:17.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -166,7 +167,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:16.091Z"
+              "WhenOpened": "2025-02-11T03:49:16.091Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -178,7 +180,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:13.361Z"
+              "WhenOpened": "2025-02-11T03:49:13.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -190,7 +193,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:11.237Z"
+              "WhenOpened": "2025-02-11T03:49:11.237Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -228,7 +232,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:49:21.722Z"
+              "WhenOpened": "2025-02-11T03:49:21.722Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -240,7 +245,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:19.43Z"
+              "WhenOpened": "2025-02-11T03:49:19.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -252,7 +258,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:09.596Z"
+              "WhenOpened": "2025-02-11T03:49:09.596Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -264,7 +271,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:07.704Z"
+              "WhenOpened": "2025-02-11T03:49:07.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -289,7 +297,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Discussions\\Delete.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:48:58.729Z"
+              "WhenOpened": "2025-02-11T03:48:58.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -314,7 +323,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Comments\\Index.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:48:53.141Z"
+              "WhenOpened": "2025-02-11T03:48:53.141Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -326,7 +336,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Comments\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:48:51.816Z"
+              "WhenOpened": "2025-02-11T03:48:51.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -338,7 +349,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Comments\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:48:50.501Z"
+              "WhenOpened": "2025-02-11T03:48:50.501Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -350,7 +362,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Comments\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:48:45.862Z"
+              "WhenOpened": "2025-02-11T03:48:45.862Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -401,7 +414,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Migrations\\MadeInCanadaForumContextModelSnapshot.cs",
               "ViewState": "AgIAAGsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:48:32.816Z"
+              "WhenOpened": "2025-02-11T03:48:32.816Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -413,7 +427,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Migrations\\20250211001728_AddTitleToDiscussion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:48:30.878Z"
+              "WhenOpened": "2025-02-11T03:48:30.878Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -425,7 +440,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Migrations\\20250208195038_InitialMigration.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:48:28.378Z"
+              "WhenOpened": "2025-02-11T03:48:28.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -450,7 +466,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Controllers\\HomeController.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:48:23.097Z"
+              "WhenOpened": "2025-02-11T03:48:23.097Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -462,7 +479,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
               "ViewState": "AgIAAI4AAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:48:18.585Z"
+              "WhenOpened": "2025-02-11T03:48:18.585Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -474,7 +492,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\Controllers\\CommentsController.cs",
               "ViewState": "AgIAAH4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T03:48:15.124Z"
+              "WhenOpened": "2025-02-11T03:48:15.124Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -486,7 +505,8 @@
               "RelativeToolTip": "MadeInCanadaForum\\wwwroot\\css\\site.css",
               "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-11T03:47:37.086Z"
+              "WhenOpened": "2025-02-11T03:47:37.086Z",
+              "EditorCaption": ""
             }
           ]
         }

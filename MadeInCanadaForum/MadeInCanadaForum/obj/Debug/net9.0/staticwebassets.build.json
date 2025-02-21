@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T4JoV1u7mEcSdNIyhF4CZU3412z8gpN8k5/Gt+3Tb/4=",
+  "Hash": "ADM+pU2dhOkJTqpJ8t2LR53dLKgSU01LWI+Jr3py8Yo=",
   "Source": "MadeInCanadaForum",
   "BasePath": "_content/MadeInCanadaForum",
   "Mode": "Default",
@@ -2789,6 +2789,27 @@
       "OriginalItemSpec": "wwwroot\\photos\\11256b81-b725-458d-99ce-c1c9940d0cd4.jpeg"
     },
     {
+      "Identity": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg",
+      "SourceId": "MadeInCanadaForum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\",
+      "BasePath": "_content/MadeInCanadaForum",
+      "RelativePath": "photos/2ca5754a-75ea-4247-92dc-974ef3e7be36#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "enigmhyme5",
+      "Integrity": "ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg"
+    },
+    {
       "Identity": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.webp",
       "SourceId": "MadeInCanadaForum",
       "SourceType": "Discovered",
@@ -2913,6 +2934,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\photos\\be1f3a00-f5e5-40d8-b08e-f038dba09c3c.webp"
+    },
+    {
+      "Identity": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\d1e76720-b897-44ea-959f-ab28743fc969.PNG",
+      "SourceId": "MadeInCanadaForum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\",
+      "BasePath": "_content/MadeInCanadaForum",
+      "RelativePath": "photos/d1e76720-b897-44ea-959f-ab28743fc969#[.{fingerprint}]?.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "89f4zx5aa6",
+      "Integrity": "PB0frdTySFsfkhg62e/u5wu+im9q0B5cTTR7uW4FGwM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\d1e76720-b897-44ea-959f-ab28743fc969.PNG"
     },
     {
       "Identity": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\f7b1df62-5b4c-4f2f-b5bc-88337fd9c952.webp",
@@ -22338,6 +22380,88 @@
       ]
     },
     {
+      "Route": "photos/2ca5754a-75ea-4247-92dc-974ef3e7be36.enigmhyme5.jpeg",
+      "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6407"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 17:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "enigmhyme5"
+        },
+        {
+          "Name": "label",
+          "Value": "photos/2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU="
+        }
+      ]
+    },
+    {
+      "Route": "photos/2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg",
+      "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6407"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 17:30:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ahxQ9/uILOBNjF0XjBb42wnsNOE2JiIF5uzKeZhiqeU="
+        }
+      ]
+    },
+    {
       "Route": "photos/4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.happz2cqbt.webp",
       "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.webp",
       "Selectors": [],
@@ -22826,6 +22950,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-tyiRYjTSni+t04Zeufia09AVIngIVLiNwW6N7sbywgE="
+        }
+      ]
+    },
+    {
+      "Route": "photos/d1e76720-b897-44ea-959f-ab28743fc969.89f4zx5aa6.PNG",
+      "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\d1e76720-b897-44ea-959f-ab28743fc969.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PB0frdTySFsfkhg62e/u5wu+im9q0B5cTTR7uW4FGwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 17:31:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "89f4zx5aa6"
+        },
+        {
+          "Name": "label",
+          "Value": "photos/d1e76720-b897-44ea-959f-ab28743fc969.PNG"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PB0frdTySFsfkhg62e/u5wu+im9q0B5cTTR7uW4FGwM="
+        }
+      ]
+    },
+    {
+      "Route": "photos/d1e76720-b897-44ea-959f-ab28743fc969.PNG",
+      "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\d1e76720-b897-44ea-959f-ab28743fc969.PNG",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "55766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PB0frdTySFsfkhg62e/u5wu+im9q0B5cTTR7uW4FGwM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 21 Feb 2025 17:31:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PB0frdTySFsfkhg62e/u5wu+im9q0B5cTTR7uW4FGwM="
         }
       ]
     },

@@ -224,7 +224,7 @@
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
               "RelativeToolTip": "MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAArwOoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAANMAAAAAAAAAAAArwOcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T03:48:18.585Z",
               "EditorCaption": ""
@@ -251,8 +251,7 @@
               "RelativeToolTip": "MadeInCanadaForum\\Views\\Discussions\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-11T03:49:05.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-11T03:49:05.028Z"
             },
             {
               "$type": "Document",

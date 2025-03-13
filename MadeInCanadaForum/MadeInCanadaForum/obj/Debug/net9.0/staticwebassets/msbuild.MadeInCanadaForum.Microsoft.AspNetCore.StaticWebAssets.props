@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yu78tspv7y</Fingerprint>
-      <Integrity>Nqnn8clbgv+5l0PgxcTOldg8mkMKrFn4TvPL+rYUUGg=</Integrity>
+      <Fingerprint>kboht3caux</Fingerprint>
+      <Integrity>oAFXFAK00qeB06dL3hvkrkM6GgJQpk+Y0RJtVEO0soc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\placeholder.jpg'))</OriginalItemSpec>
@@ -66,8 +66,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yu78tspv7y</Fingerprint>
-      <Integrity>Nqnn8clbgv+5l0PgxcTOldg8mkMKrFn4TvPL+rYUUGg=</Integrity>
+      <Fingerprint>kboht3caux</Fingerprint>
+      <Integrity>oAFXFAK00qeB06dL3hvkrkM6GgJQpk+Y0RJtVEO0soc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profile-placeholder.png'))</OriginalItemSpec>
@@ -1332,23 +1332,23 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\54b03795-d761-4996-a8ef-169426863191.webp'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\614578e4-5bc8-4e41-adfa-3d64f071a4a6.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\6db3062a-2481-41a1-b004-58205314af00.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MadeInCanadaForum</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/MadeInCanadaForum</BasePath>
-      <RelativePath>photos/614578e4-5bc8-4e41-adfa-3d64f071a4a6.jpg</RelativePath>
+      <RelativePath>photos/6db3062a-2481-41a1-b004-58205314af00.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>fui7hnyu9i</Fingerprint>
-      <Integrity>2Zdl+TUceGHOOnmTYyQ+j9xp22tXLCbDe26nnbcQ+88=</Integrity>
+      <Fingerprint>5n1uthkfee</Fingerprint>
+      <Integrity>0YSqHlDvzCFdz8yQoo0d4I7+ecJMF1fzhq3aJPJCl4A=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\614578e4-5bc8-4e41-adfa-3d64f071a4a6.jpg'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\6db3062a-2481-41a1-b004-58205314af00.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\719e711f-679a-4e5e-97e8-76de519ab397.jpg'))">
       <SourceType>Package</SourceType>
@@ -1368,6 +1368,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\719e711f-679a-4e5e-97e8-76de519ab397.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\737e6b3d-2c22-4025-8147-4ac1e2660b5a.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MadeInCanadaForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MadeInCanadaForum</BasePath>
+      <RelativePath>photos/737e6b3d-2c22-4025-8147-4ac1e2660b5a.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k24wvh9i1z</Fingerprint>
+      <Integrity>nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\737e6b3d-2c22-4025-8147-4ac1e2660b5a.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\7dd15815-4382-43ee-9115-18c4ed1b6234.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>MadeInCanadaForum</SourceId>
@@ -1385,24 +1403,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\7dd15815-4382-43ee-9115-18c4ed1b6234.webp'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\8abf1ad6-24c2-44a4-aa4b-e16fadd197e8.jpg'))">
-      <SourceType>Package</SourceType>
-      <SourceId>MadeInCanadaForum</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/MadeInCanadaForum</BasePath>
-      <RelativePath>photos/8abf1ad6-24c2-44a4-aa4b-e16fadd197e8.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5n1uthkfee</Fingerprint>
-      <Integrity>0YSqHlDvzCFdz8yQoo0d4I7+ecJMF1fzhq3aJPJCl4A=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\8abf1ad6-24c2-44a4-aa4b-e16fadd197e8.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp'))">
       <SourceType>Package</SourceType>

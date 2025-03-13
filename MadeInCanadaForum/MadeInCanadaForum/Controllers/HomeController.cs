@@ -23,6 +23,7 @@ namespace MadeInCanadaForum.Controllers
                 .Where(d => d.IsVisible)
                 .Include(d => d.Comments)
                 .Include(d => d.ApplicationUser)
+                .OrderByDescending(d => d.CreateDate)
                 .ToListAsync();
             return View(discussions);
         }

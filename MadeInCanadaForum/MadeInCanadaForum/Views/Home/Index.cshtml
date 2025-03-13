@@ -10,28 +10,40 @@
     {
         <div class="row mb-4">
             <div class="col-md-12">
-                <a asp-controller="Discussions" asp-action="Details" asp-route-id="@item.DiscussionId" class="card-link">
-                    <div class="card discussion-card">
-                        <div class="row g-0">
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h3 class="card-title display-4">@item.Title</h3>
-                                    <p class="card-text">@item.Content</p>
-                                    <p class="card-text">
-                                        <small class="text-muted">
-                                            Posted by: 
-                                            <a asp-controller="Home" asp-action="Profile" asp-route-id="@item.ApplicationUserId">
-                                                @(item.ApplicationUser?.Name ?? "Unknown")
-                                            </a>
-                                        </small>
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">Created on:
-                                            @item.CreateDate.ToString("g")</small></p>
-                                    <p class="card-text"><small class="text-muted">@item.Comments?.Count() comments</small>
-                                    </p>
+                <div class="card discussion-card">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h3 class="card-title display-4">
+                                    <a asp-controller="Discussions" asp-action="Details" asp-route-id="@item.DiscussionId" class="text-decoration-none">
+                                        @item.Title
+                                    </a>
+                                </h3>
+                                <div class="d-flex align-items-center mb-3">
+                                    <a asp-controller="Home" asp-action="Profile" asp-route-id="@item.ApplicationUserId" class="text-decoration-none me-3">
+                                        @if (!string.IsNullOrEmpty(item.ApplicationUser?.ImageFilename))
+                                        {
+                                            <img src="~/photos/@item.ApplicationUser.ImageFilename" alt="User Image" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                                        }
+                                        else
+                                        {
+                                            <img src="~/images/profile-placeholder.png" alt="Profile Placeholder" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+                                        }
+                                    </a>
+                                    <div>
+                                        <a asp-controller="Home" asp-action="Profile" asp-route-id="@item.ApplicationUserId" class="text-decoration-none">
+                                            @(item.ApplicationUser?.Name ?? "Unknown")
+                                        </a>
+                                        <br />
+                                        <small class="text-muted">@item.CreateDate.ToString("MMM dd, yyyy HH:mm")</small>
+                                    </div>
                                 </div>
+                                <p class="card-text">@item.Content</p>
+                                <p class="card-text"><small class="text-muted">@item.Comments?.Count() comments</small></p>
                             </div>
-                            <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                            <a asp-controller="Discussions" asp-action="Details" asp-route-id="@item.DiscussionId">
                                 @if (!string.IsNullOrEmpty(item.ImageFilename))
                                 {
                                     <img src="~/photos/@item.ImageFilename" alt="Discussion Image" class="img-thumbnail"
@@ -42,10 +54,10 @@
                                     <img src="~/images/placeholder.jpg" alt="Placeholder Image" class="img-thumbnail"
                                         style="height: auto; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" />
                                 }
-                            </div>
+                            </a>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     }

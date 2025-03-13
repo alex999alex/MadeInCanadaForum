@@ -21,7 +21,7 @@ namespace MadeInCanadaForum.Models
         public IFormFile? ImageFile { get; set; } // nullable
 
         [Display(Name = "Visibility")]
-        public bool IsVisible { get; set; } = false;
+        public bool IsVisible { get; set; } = true;
 
         [Display(Name = "Posted")]
         public DateTime CreateDate { get; set; } = DateTime.Now;

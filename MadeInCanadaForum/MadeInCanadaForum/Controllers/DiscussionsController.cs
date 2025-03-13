@@ -67,7 +67,13 @@ namespace MadeInCanadaForum.Controllers
         public async Task<IActionResult> Create([Bind("DiscussionId,Title,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] MadeInCanadaForum.Models.Discussion discussion)
         {
             discussion.ApplicationUserId = _userManager.GetUserId(User);
-            discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile?.FileName);
+            discussion.IsVisible = true;
+            discussion.CreateDate = DateTime.Now;
+
+            if (discussion.ImageFile != null)
+            {
+                discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile.FileName);
+            }
 
             if (ModelState.IsValid)
             {

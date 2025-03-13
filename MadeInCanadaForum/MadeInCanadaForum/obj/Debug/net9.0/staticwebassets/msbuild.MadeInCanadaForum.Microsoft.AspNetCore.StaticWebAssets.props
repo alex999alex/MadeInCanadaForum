@@ -1350,6 +1350,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\7dd15815-4382-43ee-9115-18c4ed1b6234.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\8abf1ad6-24c2-44a4-aa4b-e16fadd197e8.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MadeInCanadaForum</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MadeInCanadaForum</BasePath>
+      <RelativePath>photos/8abf1ad6-24c2-44a4-aa4b-e16fadd197e8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5n1uthkfee</Fingerprint>
+      <Integrity>0YSqHlDvzCFdz8yQoo0d4I7+ecJMF1fzhq3aJPJCl4A=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\8abf1ad6-24c2-44a4-aa4b-e16fadd197e8.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\photos\a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>MadeInCanadaForum</SourceId>

@@ -125,7 +125,9 @@ wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.j
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\photos\08633b71-7a0a-494a-b4e2-8f5c8a67c1c7.webp
 wwwroot\photos\0a9ec49e-9968-46a1-af4d-c83f907297e9.jpeg
+wwwroot\photos\0c15a3e5-0857-43d1-8f53-8851c7abe598.jpg
 wwwroot\photos\11256b81-b725-458d-99ce-c1c9940d0cd4.jpeg
+wwwroot\photos\3ac1a87d-2a50-488f-81cd-d78541700045.jpeg
 wwwroot\photos\4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.webp
 wwwroot\photos\54b03795-d761-4996-a8ef-169426863191.webp
 wwwroot\photos\7dd15815-4382-43ee-9115-18c4ed1b6234.webp

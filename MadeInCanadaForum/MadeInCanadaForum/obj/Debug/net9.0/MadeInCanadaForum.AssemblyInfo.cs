@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MadeInCanadaForum")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af968e1f694cc591046a6da647bb1b7759b990c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5bd943597470e5ef9cd1a6716ae086098cfa51f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MadeInCanadaForum")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MadeInCanadaForum")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

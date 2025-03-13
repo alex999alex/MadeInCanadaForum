@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\images\\placeholder.jpg",
+      "PackagePath": "staticwebassets\\images\\placeholder.jpg"
+    },
+    {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\images\\profile-placeholder.png",
       "PackagePath": "staticwebassets\\images\\profile-placeholder.png"
     },
@@ -281,6 +285,10 @@
       "PackagePath": "staticwebassets\\photos\\2ca5754a-75ea-4247-92dc-974ef3e7be36.jpeg"
     },
     {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\33c8a6f2-df3c-4c69-a852-f2b5b957ca1a.jpg",
+      "PackagePath": "staticwebassets\\photos\\33c8a6f2-df3c-4c69-a852-f2b5b957ca1a.jpg"
+    },
+    {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.webp",
       "PackagePath": "staticwebassets\\photos\\4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.webp"
     },
@@ -309,8 +317,16 @@
       "PackagePath": "staticwebassets\\photos\\be1f3a00-f5e5-40d8-b08e-f038dba09c3c.webp"
     },
     {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\ca07149f-c7d9-4d9a-9861-b3a11ae61167.webp",
+      "PackagePath": "staticwebassets\\photos\\ca07149f-c7d9-4d9a-9861-b3a11ae61167.webp"
+    },
+    {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\d1e76720-b897-44ea-959f-ab28743fc969.PNG",
       "PackagePath": "staticwebassets\\photos\\d1e76720-b897-44ea-959f-ab28743fc969.PNG"
+    },
+    {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\ee17f5df-4ab4-4e81-82c3-75c51019805c.jpg",
+      "PackagePath": "staticwebassets\\photos\\ee17f5df-4ab4-4e81-82c3-75c51019805c.jpg"
     },
     {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\f7b1df62-5b4c-4f2f-b5bc-88337fd9c952.webp",

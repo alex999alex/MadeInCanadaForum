@@ -33,18 +33,17 @@ namespace MadeInCanadaForum.Controllers
         // POST: Comments/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Content,DiscussionId")] Comment comment)
+        public async Task<IActionResult> Create([Bind("Content,DiscussionId,ParentCommentId")] Comment comment)
         {
             if (ModelState.IsValid)
             {
-                comment.CreateDate = DateTime.Now;
                 comment.ApplicationUserId = _userManager.GetUserId(User);
+                comment.CreateDate = DateTime.Now;
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); 
+                return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId });
             }
-            ViewData["DiscussionId"] = comment.DiscussionId; 
-            return View(comment);
+            return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId });
         }
 
         // GET: Comments/Edit/5
@@ -148,6 +147,30 @@ namespace MadeInCanadaForum.Controllers
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Edit", "Discussions", new { id = comment.DiscussionId });
+        }
+
+        // POST: Comments/Vote
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Vote(int id, bool isUpvote)
+        {
+            var comment = await _context.Comment.FindAsync(id);
+            if (comment == null)
+            {
+                return NotFound();
+            }
+
+            if (isUpvote)
+            {
+                comment.UpVotes++;
+            }
+            else
+            {
+                comment.DownVotes++;
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId });
         }
 
         private bool CommentExists(int id)

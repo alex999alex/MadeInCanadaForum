@@ -13,14 +13,19 @@ namespace MadeInCanadaForum.Models
         [Display(Name = "Posted")]
         public DateTime CreateDate { get; set; } = DateTime.Now;
 
-        // Foreign key for Discussion
+        // Foreign keys
         public int DiscussionId { get; set; }
-
-        // Foreign key for ApplicationUser
         public string? ApplicationUserId { get; set; }
+        public int? ParentCommentId { get; set; }  // For nested replies
 
         // Navigation properties
-        public Discussion? Discussion { get; set; }  //nullable
-        public ApplicationUser? ApplicationUser { get; set; }  //nullable
+        public Discussion? Discussion { get; set; }
+        public ApplicationUser? ApplicationUser { get; set; }
+        public Comment? ParentComment { get; set; }
+        public List<Comment>? Replies { get; set; }
+        
+        // Voting
+        public int UpVotes { get; set; }
+        public int DownVotes { get; set; }
     }
 }

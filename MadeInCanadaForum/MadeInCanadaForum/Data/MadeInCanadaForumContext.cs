@@ -22,12 +22,17 @@ namespace MadeInCanadaForum.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Configure the relationship between Comment and Discussion
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.ParentComment)
+                .WithMany(c => c.Replies)
+                .HasForeignKey(c => c.ParentCommentId)
+                .OnDelete(DeleteBehavior.NoAction);
+
             modelBuilder.Entity<Comment>()
                 .HasOne(c => c.Discussion)
                 .WithMany(d => d.Comments)
                 .HasForeignKey(c => c.DiscussionId)
-                .OnDelete(DeleteBehavior.NoAction); // Changed from Cascade to NoAction
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

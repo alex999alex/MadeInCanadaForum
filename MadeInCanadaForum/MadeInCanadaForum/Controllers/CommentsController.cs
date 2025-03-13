@@ -7,18 +7,22 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MadeInCanadaForum.Data;
 using MadeInCanadaForum.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace MadeInCanadaForum.Controllers
 {
+    [Authorize]
     public class CommentsController : Controller
     {
         private readonly MadeInCanadaForumContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public CommentsController(MadeInCanadaForumContext context)
+        public CommentsController(MadeInCanadaForumContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
-
 
         public IActionResult Create(int discussionId)
         {
@@ -33,7 +37,8 @@ namespace MadeInCanadaForum.Controllers
         {
             if (ModelState.IsValid)
             {
-                comment.CreateDate = DateTime.Now; 
+                comment.CreateDate = DateTime.Now;
+                comment.ApplicationUserId = _userManager.GetUserId(User);
                 _context.Add(comment);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Details", "Discussions", new { id = comment.DiscussionId }); 
@@ -55,6 +60,14 @@ namespace MadeInCanadaForum.Controllers
             {
                 return NotFound();
             }
+            
+            // Check if the current user is the owner of the comment
+            var userId = _userManager.GetUserId(User);
+            if (comment.ApplicationUserId != userId)
+            {
+                return Forbid();
+            }
+            
             ViewData["DiscussionId"] = comment.DiscussionId; 
             return View(comment);
         }
@@ -68,6 +81,19 @@ namespace MadeInCanadaForum.Controllers
             {
                 return NotFound();
             }
+            
+            // Check if the current user is the owner of the comment
+            var userId = _userManager.GetUserId(User);
+            var existingComment = await _context.Comment.FindAsync(id);
+            
+            if (existingComment == null || existingComment.ApplicationUserId != userId)
+            {
+                return Forbid();
+            }
+            
+            // Preserve the ApplicationUserId
+            comment.ApplicationUserId = userId;
+            comment.CreateDate = existingComment.CreateDate;
 
             if (ModelState.IsValid)
             {
@@ -104,19 +130,25 @@ namespace MadeInCanadaForum.Controllers
             var comment = await _context.Comment
                 .Include(c => c.Discussion)
                 .FirstOrDefaultAsync(m => m.CommentId == id);
+                
             if (comment == null)
             {
                 return NotFound();
+            }
+            
+            // Check if the current user is the owner of the comment
+            var userId = _userManager.GetUserId(User);
+            if (comment.ApplicationUserId != userId)
+            {
+                return Forbid();
             }
 
             //delete the comment in database
             _context.Comment.Remove(comment);
             await _context.SaveChangesAsync();
 
-
             return RedirectToAction("Edit", "Discussions", new { id = comment.DiscussionId });
         }
-
 
         private bool CommentExists(int id)
         {

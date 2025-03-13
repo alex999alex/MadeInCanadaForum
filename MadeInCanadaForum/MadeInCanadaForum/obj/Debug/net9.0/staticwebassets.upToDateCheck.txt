@@ -62,6 +62,7 @@ C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\wwwroot\lib\jq
 C:\0_Github\MadeInCanadaForum\MadeInCanadaForum\MadeInCanadaForum\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\images\profile-placeholder.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

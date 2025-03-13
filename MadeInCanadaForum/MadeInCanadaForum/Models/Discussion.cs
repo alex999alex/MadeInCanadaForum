@@ -29,7 +29,11 @@ namespace MadeInCanadaForum.Models
         [Display(Name = "Title")]
         public string Title { get; set; } = string.Empty;
 
-        //Navigation property
+        // Foreign key for ApplicationUser
+        public string? ApplicationUserId { get; set; }
+
+        // Navigation properties
         public List<Comment>? Comments { get; set; } //nullable
+        public ApplicationUser? ApplicationUser { get; set; } //nullable
     }
 }

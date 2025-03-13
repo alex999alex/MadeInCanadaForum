@@ -1,0 +1,71 @@
+@model IEnumerable<MadeInCanadaForum.Models.Discussion>
+@{
+    ViewData["Title"] = "User Profile";
+    var user = ViewBag.User as MadeInCanadaForum.Models.ApplicationUser;
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+                            @if (!string.IsNullOrEmpty(user.ImageFilename))
+                            {
+                                <img src="~/photos/@user.ImageFilename" alt="Profile Picture" class="img-thumbnail rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <img src="~/images/profile-placeholder.png" alt="Profile Picture" class="img-thumbnail rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" />
+                            }
+                        </div>
+                        <div class="col-md-9">
+                            <h2 class="card-title">@user.Name</h2>
+                            @if (!string.IsNullOrEmpty(user.Location))
+                            {
+                                <p class="card-text"><i class="bi bi-geo-alt"></i> @user.Location</p>
+                            }
+                            <p class="card-text"><small class="text-muted">Member since: @user.Email</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mb-3">Discussions by @user.Name</h3>
+
+    @if (Model.Any())
+    {
+        @foreach (var item in Model)
+        {
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <a asp-controller="Discussions" asp-action="Details" asp-route-id="@item.DiscussionId" class="card-link">
+                        <div class="card discussion-card">
+                            <div class="row g-0">
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h3 class="card-title">@item.Title</h3>
+                                        <p class="card-text"><small class="text-muted">Created on: @item.CreateDate.ToString("g")</small></p>
+                                        <p class="card-text"><small class="text-muted">@item.Comments?.Count() comments</small></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="~/photos/@item.ImageFilename" alt="Discussion Image" class="img-thumbnail" style="height: auto; width: 100%; aspect-ratio: 16 / 9; object-fit: cover;" />
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="alert alert-info">
+            This user hasn't posted any discussions yet.
+        </div>
+    }
+</div> 

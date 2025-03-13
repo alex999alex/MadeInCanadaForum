@@ -4,37 +4,92 @@
     ViewData["Title"] = "Discussion Details";
 }
 
-<h1>@Model.Title</h1>
-
-<div>
-    <p>Posted @Model.CreateDate</p>
-    @if (!string.IsNullOrEmpty(Model.ImageFilename))
-    {
-        <img src="~/photos/@Model.ImageFilename" alt="Discussion Image" style="width: 1200px; height: auto;" />
-    }
-    <p class="lead mt-3">@Model.Content</p>
-</div>
-<hr />
-<h4>Comments</h4>
-<hr />
-@foreach (var comment in Model.Comments)
-{
-    <div>
-        <p>@comment.Content</p>
-        <small>Posted on: @comment.CreateDate.ToString("g")</small>
-        <hr />
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h1>@Model.Title</h1>
+            <div class="d-flex align-items-center mb-3">
+                <div class="me-3">
+                    @if (Model.ApplicationUser != null && !string.IsNullOrEmpty(Model.ApplicationUser.ImageFilename))
+                    {
+                        <img src="~/photos/@Model.ApplicationUser.ImageFilename" alt="Profile Picture" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" />
+                    }
+                    else
+                    {
+                        <img src="~/images/profile-placeholder.png" alt="Profile Picture" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover;" />
+                    }
+                </div>
+                <div>
+                    <p class="mb-0">
+                        Posted by: 
+                        <a asp-controller="Home" asp-action="Profile" asp-route-id="@Model.ApplicationUserId">
+                            @(Model.ApplicationUser?.Name ?? "Unknown")
+                        </a>
+                    </p>
+                    <small class="text-muted">@Model.CreateDate.ToString("g")</small>
+                </div>
+            </div>
+            
+            @if (!string.IsNullOrEmpty(Model.ImageFilename))
+            {
+                <img src="~/photos/@Model.ImageFilename" alt="Discussion Image" class="img-fluid mb-3" style="max-width: 100%;" />
+            }
+            <p class="lead">@Model.Content</p>
+            <p><strong>Location:</strong> @Model.Location</p>
+            <p><strong>Camera:</strong> @Model.Camera</p>
+        </div>
     </div>
-}
 
-<div>
-    <form asp-action="Create" asp-controller="Comments">
-        <input type="hidden" name="DiscussionId" value="@Model.DiscussionId" />
-        <div class="mb-3">
-            <label asp-for="Content" class="control-label"></label>
-            <textarea name="Content" class="form-control"></textarea>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Comments</h4>
+            <hr />
+            @if (Model.Comments != null && Model.Comments.Any())
+            {
+                foreach (var comment in Model.Comments)
+                {
+                    <div class="d-flex mb-3">
+                        <div class="me-3">
+                            @if (comment.ApplicationUser != null && !string.IsNullOrEmpty(comment.ApplicationUser.ImageFilename))
+                            {
+                                <img src="~/photos/@comment.ApplicationUser.ImageFilename" alt="Profile Picture" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;" />
+                            }
+                            else
+                            {
+                                <img src="~/images/profile-placeholder.png" alt="Profile Picture" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;" />
+                            }
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between">
+                                <p class="mb-0 fw-bold">
+                                    <a asp-controller="Home" asp-action="Profile" asp-route-id="@comment.ApplicationUserId">
+                                        @(comment.ApplicationUser?.Name ?? "Unknown")
+                                    </a>
+                                </p>
+                                <small class="text-muted">@comment.CreateDate.ToString("g")</small>
+                            </div>
+                            <p>@comment.Content</p>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>No comments yet. Be the first to comment!</p>
+            }
+
+            <div class="mt-4">
+                <form asp-action="Create" asp-controller="Comments">
+                    <input type="hidden" name="DiscussionId" value="@Model.DiscussionId" />
+                    <div class="mb-3">
+                        <label for="Content" class="form-label">Add a comment</label>
+                        <textarea name="Content" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Post Comment</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-            <input type="submit" value="Add Comment" class="btn btn-primary" />
-        </div>
-    </form>
+    </div>
 </div>

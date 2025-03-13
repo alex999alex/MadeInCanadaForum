@@ -7,26 +7,36 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MadeInCanadaForum.Data;
 using MadeInCanadaForum.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace MadeInCanadaForum.Controllers
 {
+    [Authorize]
     public class DiscussionsController : Controller
     {
         private readonly MadeInCanadaForumContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public DiscussionsController(MadeInCanadaForumContext context)
+        public DiscussionsController(MadeInCanadaForumContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Discussions
         public async Task<IActionResult> Index()
         {
-            var discussions = await _context.Discussion.ToListAsync();
+            var userId = _userManager.GetUserId(User);
+            var discussions = await _context.Discussion
+                .Where(d => d.ApplicationUserId == userId)
+                .Include(d => d.ApplicationUser)
+                .ToListAsync();
             return View(discussions);
         }
 
         // GET: Discussions/Details/5
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -35,6 +45,8 @@ namespace MadeInCanadaForum.Controllers
             }
             var discussion = await _context.Discussion
                 .Include(d => d.Comments)
+                .ThenInclude(c => c.ApplicationUser)
+                .Include(d => d.ApplicationUser)
                 .FirstOrDefaultAsync(m => m.DiscussionId == id);
             if (discussion == null)
             {
@@ -43,25 +55,24 @@ namespace MadeInCanadaForum.Controllers
             return View(discussion);
         }
 
-
+        // GET: Discussions/Create
         public IActionResult Create()
         {
             return View();
         }
 
-  
+        // POST: Discussions/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DiscussionId,Title,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] MadeInCanadaForum.Models.Discussion discussion)
         {
-  
+            discussion.ApplicationUserId = _userManager.GetUserId(User);
             discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile?.FileName);
 
             if (ModelState.IsValid)
             {
                 _context.Add(discussion);
                 await _context.SaveChangesAsync();
-
 
                 if (discussion.ImageFile != null)
                 {
@@ -71,7 +82,6 @@ namespace MadeInCanadaForum.Controllers
                         await discussion.ImageFile.CopyToAsync(fileStream);
                     }
                 }
-
 
                 return RedirectToAction(nameof(Index));
             }
@@ -86,16 +96,26 @@ namespace MadeInCanadaForum.Controllers
                 return NotFound();
             }
 
-
-            var discussion = await _context.Discussion.Include("Comments").FirstOrDefaultAsync(m => m.DiscussionId == id);
+            var discussion = await _context.Discussion
+                .Include(d => d.Comments)
+                .FirstOrDefaultAsync(m => m.DiscussionId == id);
+                
             if (discussion == null)
             {
                 return NotFound();
             }
+            
+            // Check if the current user is the owner of the discussion
+            var userId = _userManager.GetUserId(User);
+            if (discussion.ApplicationUserId != userId)
+            {
+                return Forbid();
+            }
+            
             return View(discussion);
         }
 
-
+        // POST: Discussions/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, MadeInCanadaForum.Models.Discussion discussion)
@@ -104,6 +124,18 @@ namespace MadeInCanadaForum.Controllers
             {
                 return NotFound();
             }
+            
+            // Check if the current user is the owner of the discussion
+            var userId = _userManager.GetUserId(User);
+            var existingDiscussion = await _context.Discussion.FindAsync(id);
+            
+            if (existingDiscussion == null || existingDiscussion.ApplicationUserId != userId)
+            {
+                return Forbid();
+            }
+            
+            // Preserve the ApplicationUserId
+            discussion.ApplicationUserId = userId;
 
             if (ModelState.IsValid)
             {
@@ -137,10 +169,19 @@ namespace MadeInCanadaForum.Controllers
             }
 
             var discussion = await _context.Discussion
+                .Include(d => d.ApplicationUser)
                 .FirstOrDefaultAsync(m => m.DiscussionId == id);
+                
             if (discussion == null)
             {
                 return NotFound();
+            }
+            
+            // Check if the current user is the owner of the discussion
+            var userId = _userManager.GetUserId(User);
+            if (discussion.ApplicationUserId != userId)
+            {
+                return Forbid();
             }
 
             return View(discussion);
@@ -152,11 +193,19 @@ namespace MadeInCanadaForum.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var discussion = await _context.Discussion.FindAsync(id);
-            if (discussion != null)
+            if (discussion == null)
             {
-                _context.Discussion.Remove(discussion);
+                return NotFound();
             }
-
+            
+            // Check if the current user is the owner of the discussion
+            var userId = _userManager.GetUserId(User);
+            if (discussion.ApplicationUserId != userId)
+            {
+                return Forbid();
+            }
+            
+            _context.Discussion.Remove(discussion);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

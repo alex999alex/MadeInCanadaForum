@@ -1,20 +1,26 @@
-﻿namespace MadeInCanadaForum.Models
-{
+﻿using System.ComponentModel.DataAnnotations;
 
+namespace MadeInCanadaForum.Models
+{
     public class Comment
     {
         // Primary key
         public int CommentId { get; set; }
 
-
+        [Required]
         public string Content { get; set; } = string.Empty;
 
-        public DateTime CreateDate { get; set; }
+        [Display(Name = "Posted")]
+        public DateTime CreateDate { get; set; } = DateTime.Now;
 
-        // Foreign key
+        // Foreign key for Discussion
         public int DiscussionId { get; set; }
 
-        // Navigation property
+        // Foreign key for ApplicationUser
+        public string? ApplicationUserId { get; set; }
+
+        // Navigation properties
         public Discussion? Discussion { get; set; }  //nullable
+        public ApplicationUser? ApplicationUser { get; set; }  //nullable
     }
 }

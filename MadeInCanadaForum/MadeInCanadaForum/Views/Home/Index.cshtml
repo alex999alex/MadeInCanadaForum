@@ -16,6 +16,14 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h3 class="card-title display-4">@item.Title</h3>
+                                    <p class="card-text">
+                                        <small class="text-muted">
+                                            Posted by: 
+                                            <a asp-controller="Home" asp-action="Profile" asp-route-id="@item.ApplicationUserId">
+                                                @(item.ApplicationUser?.Name ?? "Unknown")
+                                            </a>
+                                        </small>
+                                    </p>
                                     <p class="card-text"><small class="text-muted">Created on:
                                             @item.CreateDate.ToString("g")</small></p>
                                     <p class="card-text"><small class="text-muted">@item.Comments?.Count() comments</small>

@@ -198,7 +198,10 @@ namespace MadeInCanadaForum.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var discussion = await _context.Discussion.FindAsync(id);
+            var discussion = await _context.Discussion
+                .Include(d => d.Comments)  // Include comments
+                .FirstOrDefaultAsync(d => d.DiscussionId == id);
+
             if (discussion == null)
             {
                 return NotFound();
@@ -210,9 +213,34 @@ namespace MadeInCanadaForum.Controllers
             {
                 return Forbid();
             }
+
+            // Delete the image file if it exists
+            if (!string.IsNullOrEmpty(discussion.ImageFilename))
+            {
+                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "photos", discussion.ImageFilename);
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
+            // Delete associated comments first
+            if (discussion.Comments != null)
+            {
+                _context.Comment.RemoveRange(discussion.Comments);
+            }
             
+            // Then delete the discussion
             _context.Discussion.Remove(discussion);
             await _context.SaveChangesAsync();
+
+            // If the request is AJAX, return a JSON result
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return Json(new { success = true });
+            }
+
+            // Otherwise, redirect to the index page
             return RedirectToAction(nameof(Index));
         }
 

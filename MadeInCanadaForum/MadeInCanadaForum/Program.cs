@@ -3,7 +3,14 @@ using Microsoft.Extensions.DependencyInjection;
 using MadeInCanadaForum.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MadeInCanadaForumContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("MadeInCanadaForumContext") ?? throw new InvalidOperationException("Connection string 'MadeInCanadaForumContext' not found.")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MadeInCanadaForumContext") ?? throw new InvalidOperationException("Connection string 'MadeInCanadaForumContext' not found."),
+    sqlServerOptionsAction: sqlOptions =>
+    {
+        sqlOptions.EnableRetryOnFailure(
+            maxRetryCount: 5,
+            maxRetryDelay: TimeSpan.FromSeconds(30),
+            errorNumbersToAdd: null);
+    }));
 
 
 builder.Services.AddControllersWithViews();

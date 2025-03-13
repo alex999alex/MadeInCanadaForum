@@ -257,6 +257,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\0132476b-399a-451f-9602-eea82061801b.png",
+      "PackagePath": "staticwebassets\\photos\\0132476b-399a-451f-9602-eea82061801b.png"
+    },
+    {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\08633b71-7a0a-494a-b4e2-8f5c8a67c1c7.webp",
       "PackagePath": "staticwebassets\\photos\\08633b71-7a0a-494a-b4e2-8f5c8a67c1c7.webp"
     },
@@ -287,6 +291,10 @@
     {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp",
       "PackagePath": "staticwebassets\\photos\\a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp"
+    },
+    {
+      "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\b601aec5-e54f-4146-9b5c-81f60e398e74.jpg",
+      "PackagePath": "staticwebassets\\photos\\b601aec5-e54f-4146-9b5c-81f60e398e74.jpg"
     },
     {
       "Id": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\bad521e0-a76a-4435-b2c4-cb0a12aa3a96.jpeg",

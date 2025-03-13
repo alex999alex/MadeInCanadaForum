@@ -17,12 +17,4 @@ namespace MadeInCanadaForum.Data
         public DbSet<MadeInCanadaForum.Models.Discussion> Discussion { get; set; } = default!;
         public DbSet<MadeInCanadaForum.Models.Comment> Comment { get; set; } = default!;
     }
-    public class Discussion
-    {
-        public int DiscussionId { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string ImagePath { get; set; } // Add this property to store the image path
-        public DateTime CreateDate { get; set; }
-    }
 }

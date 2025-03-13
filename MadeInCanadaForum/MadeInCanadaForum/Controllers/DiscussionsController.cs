@@ -52,7 +52,7 @@ namespace MadeInCanadaForum.Controllers
   
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DiscussionId,Title,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] Discussion discussion)
+        public async Task<IActionResult> Create([Bind("DiscussionId,Title,Content,Location,Camera,ImageFile,IsVisible,CreateDate")] MadeInCanadaForum.Models.Discussion discussion)
         {
   
             discussion.ImageFilename = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile?.FileName);
@@ -98,8 +98,7 @@ namespace MadeInCanadaForum.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-        public async Task<IActionResult> Edit(int id, Discussion discussion)
+        public async Task<IActionResult> Edit(int id, MadeInCanadaForum.Models.Discussion discussion)
         {
             if (id != discussion.DiscussionId)
             {

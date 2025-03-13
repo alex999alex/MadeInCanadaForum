@@ -123,6 +123,7 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\photos\0132476b-399a-451f-9602-eea82061801b.png
 wwwroot\photos\08633b71-7a0a-494a-b4e2-8f5c8a67c1c7.webp
 wwwroot\photos\0a9ec49e-9968-46a1-af4d-c83f907297e9.jpeg
 wwwroot\photos\11256b81-b725-458d-99ce-c1c9940d0cd4.jpeg
@@ -131,6 +132,7 @@ wwwroot\photos\4c15a80a-89e3-47d7-9e0d-a43a0a734a3f.webp
 wwwroot\photos\54b03795-d761-4996-a8ef-169426863191.webp
 wwwroot\photos\7dd15815-4382-43ee-9115-18c4ed1b6234.webp
 wwwroot\photos\a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp
+wwwroot\photos\b601aec5-e54f-4146-9b5c-81f60e398e74.jpg
 wwwroot\photos\bad521e0-a76a-4435-b2c4-cb0a12aa3a96.jpeg
 wwwroot\photos\be1f3a00-f5e5-40d8-b08e-f038dba09c3c.webp
 wwwroot\photos\d1e76720-b897-44ea-959f-ab28743fc969.PNG

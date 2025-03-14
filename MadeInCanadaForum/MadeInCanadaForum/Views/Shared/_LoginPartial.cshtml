@@ -14,14 +14,11 @@
     <li class="nav-item me-3">
         <a class="nav-link text-dark d-flex align-items-center" asp-area="Identity" asp-page="/Account/Manage/Index">
             <span class="me-2">Hello @User.Identity?.Name</span>
-            @if (!string.IsNullOrEmpty(UserManager.GetUserAsync(User).Result?.ImageFilename))
-            {
-                <img src="~/photos/@UserManager.GetUserAsync(User).Result?.ImageFilename" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;" />
+            @{
+                var user = await UserManager.GetUserAsync(User);
+                var profileImage = !string.IsNullOrEmpty(user?.ImageFilename) ? $"~/photos/{user.ImageFilename}" : "~/images/profile-placeholder.png";
             }
-            else
-            {
-                <img src="~/images/profile-placeholder.jpg" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;" />
-            }
+            <img src="@profileImage" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;" onerror="this.src='/images/profile-placeholder.png';" />
         </a>
     </li>
     <li class="nav-item">

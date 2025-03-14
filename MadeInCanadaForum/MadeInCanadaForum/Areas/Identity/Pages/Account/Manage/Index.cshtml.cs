@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MadeInCanadaForum.Areas.Identity.Pages.Account.Manage
 {
@@ -19,13 +20,16 @@ namespace MadeInCanadaForum.Areas.Identity.Pages.Account.Manage
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IWebHostEnvironment _environment;
 
         public IndexModel(
             UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager)
+            SignInManager<ApplicationUser> signInManager,
+            IWebHostEnvironment environment)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _environment = environment;
         }
 
         /// <summary>
@@ -58,9 +62,10 @@ namespace MadeInCanadaForum.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Phone]
-            [Display(Name = "Phone number")]
-            public string PhoneNumber { get; set; }
+            [Required]
+            [EmailAddress]
+            [Display(Name = "Email")]
+            public string Email { get; set; }
 
             [Required]
             [Display(Name = "Name")]
@@ -79,13 +84,13 @@ namespace MadeInCanadaForum.Areas.Identity.Pages.Account.Manage
         private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var email = await _userManager.GetEmailAsync(user);
 
             Username = userName;
 
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber,
+                Email = email,
                 Name = user.Name,
                 Location = user.Location,
                 CurrentImageFilename = user.ImageFilename
@@ -118,36 +123,57 @@ namespace MadeInCanadaForum.Areas.Identity.Pages.Account.Manage
                 return Page();
             }
 
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
+            var email = await _userManager.GetEmailAsync(user);
+            if (Input.Email != email)
             {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
+                var setEmailResult = await _userManager.SetEmailAsync(user, Input.Email);
+                if (!setEmailResult.Succeeded)
                 {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
+                    StatusMessage = "Error: Failed to update email.";
                     return RedirectToPage();
                 }
             }
 
-            // Update custom fields
-            user.Name = Input.Name;
-            user.Location = Input.Location;
+            if (Input.Name != user.Name)
+            {
+                user.Name = Input.Name;
+            }
 
-            // Handle profile picture upload
+            if (Input.Location != user.Location)
+            {
+                user.Location = Input.Location;
+            }
+
             if (Input.ImageFile != null)
             {
-                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(Input.ImageFile.FileName);
-                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "photos", fileName);
-                
+                // Delete old image if exists
+                if (!string.IsNullOrEmpty(user.ImageFilename))
+                {
+                    var oldImagePath = Path.Combine(_environment.WebRootPath, "photos", user.ImageFilename);
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
+                // Save new image
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(Input.ImageFile.FileName);
+                var filePath = Path.Combine(_environment.WebRootPath, "photos", fileName);
+
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await Input.ImageFile.CopyToAsync(fileStream);
                 }
-                
+
                 user.ImageFilename = fileName;
             }
 
-            await _userManager.UpdateAsync(user);
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                StatusMessage = "Error: Failed to update profile.";
+                return RedirectToPage();
+            }
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";

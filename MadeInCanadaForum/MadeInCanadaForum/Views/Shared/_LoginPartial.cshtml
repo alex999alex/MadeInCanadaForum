@@ -6,6 +6,8 @@
 <ul class="navbar-nav ms-auto d-flex align-items-center">
 @if (SignInManager.IsSignedIn(User))
 {
+    var user = await UserManager.GetUserAsync(User);
+    
     <li class="nav-item me-3">
         <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="Discussions" asp-action="Index">
             <span>My Discussions</span>
@@ -13,12 +15,15 @@
     </li>
     <li class="nav-item me-3">
         <a class="nav-link text-dark d-flex align-items-center" asp-area="Identity" asp-page="/Account/Manage/Index">
-            <span class="me-2">Hello @User.Identity?.Name</span>
-            @{
-                var user = await UserManager.GetUserAsync(User);
-                var profileImage = !string.IsNullOrEmpty(user?.ImageFilename) ? $"~/photos/{user.ImageFilename}" : "~/images/profile-placeholder.png";
+            <span class="me-2">Hello @user?.Name</span>
+            @if (!string.IsNullOrEmpty(user?.ImageFilename))
+            {
+                <img src="/photos/@user.ImageFilename" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;" />
             }
-            <img src="@profileImage" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;" onerror="this.src='/images/profile-placeholder.png';" />
+            else
+            {
+                <img src="/images/profile-placeholder.png" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;" />
+            }
         </a>
     </li>
     <li class="nav-item">

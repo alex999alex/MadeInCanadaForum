@@ -125,7 +125,7 @@ namespace MadeInCanadaForum.Controllers
         // POST: Discussions/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, MadeInCanadaForum.Models.Discussion discussion)
+        public async Task<IActionResult> Edit(int id, [Bind("DiscussionId,Title,Content,ImageFile")] Discussion discussion)
         {
             if (id != discussion.DiscussionId)
             {
@@ -140,15 +140,40 @@ namespace MadeInCanadaForum.Controllers
             {
                 return Forbid();
             }
-            
-            // Preserve the ApplicationUserId
-            discussion.ApplicationUserId = userId;
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(discussion);
+                    // Update the existing discussion's properties
+                    existingDiscussion.Title = discussion.Title;
+                    existingDiscussion.Content = discussion.Content;
+
+                    // Handle new image file if uploaded
+                    if (discussion.ImageFile != null)
+                    {
+                        // Delete old image if it exists
+                        if (!string.IsNullOrEmpty(existingDiscussion.ImageFilename))
+                        {
+                            var oldImagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "photos", existingDiscussion.ImageFilename);
+                            if (System.IO.File.Exists(oldImagePath))
+                            {
+                                System.IO.File.Delete(oldImagePath);
+                            }
+                        }
+
+                        // Save new image
+                        string newFileName = Guid.NewGuid().ToString() + Path.GetExtension(discussion.ImageFile.FileName);
+                        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "photos", newFileName);
+                        
+                        using (var fileStream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await discussion.ImageFile.CopyToAsync(fileStream);
+                        }
+
+                        existingDiscussion.ImageFilename = newFileName;
+                    }
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

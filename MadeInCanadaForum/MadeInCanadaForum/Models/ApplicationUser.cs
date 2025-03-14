@@ -20,6 +20,9 @@ namespace MadeInCanadaForum.Models
         [Display(Name = "Profile Picture")]
         public IFormFile? ImageFile { get; set; }
 
+        [Display(Name = "Member Since")]
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+
         // Navigation properties
         public virtual ICollection<Discussion>? Discussions { get; set; }
         public virtual ICollection<Comment>? Comments { get; set; }

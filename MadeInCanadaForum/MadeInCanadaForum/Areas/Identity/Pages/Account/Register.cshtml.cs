@@ -133,6 +133,7 @@ namespace MadeInCanadaForum.Areas.Identity.Pages.Account
                 // Set custom properties
                 user.Name = Input.Name;
                 user.Location = Input.Location;
+                user.CreatedDate = DateTime.Now;
                 
                 // Handle profile picture upload
                 if (Input.ImageFile != null)

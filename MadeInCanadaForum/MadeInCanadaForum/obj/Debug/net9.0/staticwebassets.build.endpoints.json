@@ -28538,6 +28538,88 @@
       ]
     },
     {
+      "Route": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "AssetFile": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1225558"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 00:01:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU="
+        }
+      ]
+    },
+    {
+      "Route": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.k24wvh9i1z.jpg",
+      "AssetFile": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1225558"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 00:01:04 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k24wvh9i1z"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU="
+        },
+        {
+          "Name": "label",
+          "Value": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg"
+        }
+      ]
+    },
+    {
       "Route": "photos/a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.9jgdxcgz9p.webp",
       "AssetFile": "photos/a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp",
       "Selectors": [],

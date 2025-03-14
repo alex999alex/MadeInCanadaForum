@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|c:\\0_github\\madeincanadaforum\\madeincanadaforum\\madeincanadaforum\\controllers\\discussionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{243F5018-980D-4B0F-983F-B4EAF9318018}|MadeInCanadaForum\\MadeInCanadaForum.csproj|solutionrelative:madeincanadaforum\\controllers\\discussionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -122,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 169,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -146,7 +150,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "MadeInCanadaForum\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T00:08:40.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Program.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Program.cs",
@@ -158,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Home\\Index.cshtml",
@@ -170,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "DiscussionDetails.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Home\\DiscussionDetails.cshtml",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Discussions\\Edit.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Discussions\\Edit.cshtml",
@@ -194,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Discussions\\Delete.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Discussions\\Delete.cshtml",
@@ -206,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MadeInCanadaForumContext.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Data\\MadeInCanadaForumContext.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Data\\MadeInCanadaForumContext.cs",
@@ -218,20 +235,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DiscussionsController.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
               "ToolTip": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
               "RelativeToolTip": "MadeInCanadaForum\\Controllers\\DiscussionsController.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAAArwOkAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAANQAAAAAAAAAAAArwOcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-11T03:48:18.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Controllers\\HomeController.cs",
@@ -243,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Discussions\\Index.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Discussions\\Index.cshtml",
@@ -255,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\_ViewStart.cshtml",
@@ -267,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Discussions\\Details.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Discussions\\Details.cshtml",
@@ -279,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Home\\Privacy.cshtml",
@@ -291,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Shared\\_Layout.cshtml",
@@ -303,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -315,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\_ViewImports.cshtml",
@@ -327,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Discussions\\Create.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Discussions\\Create.cshtml",
@@ -339,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Comments\\Index.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Comments\\Index.cshtml",
@@ -351,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Comments\\Edit.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Comments\\Edit.cshtml",
@@ -363,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Comments\\Details.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Comments\\Details.cshtml",
@@ -375,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Comments\\Delete.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Comments\\Delete.cshtml",
@@ -387,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Views\\Comments\\Create.cshtml",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Views\\Comments\\Create.cshtml",
@@ -399,7 +416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Discussion.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Models\\Discussion.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Models\\Discussion.cs",
@@ -411,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Comment.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Models\\Comment.cs",
@@ -423,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "MadeInCanadaForumContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Migrations\\MadeInCanadaForumContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Migrations\\MadeInCanadaForumContextModelSnapshot.cs",
@@ -435,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "20250211001728_AddTitleToDiscussion.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Migrations\\20250211001728_AddTitleToDiscussion.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Migrations\\20250211001728_AddTitleToDiscussion.cs",
@@ -447,7 +464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "20250208195038_InitialMigration.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Migrations\\20250208195038_InitialMigration.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Migrations\\20250208195038_InitialMigration.cs",
@@ -459,7 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "CommentsController.cs",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\Controllers\\CommentsController.cs",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\Controllers\\CommentsController.cs",
@@ -471,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "site.css",
               "DocumentMoniker": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "MadeInCanadaForum\\wwwroot\\css\\site.css",

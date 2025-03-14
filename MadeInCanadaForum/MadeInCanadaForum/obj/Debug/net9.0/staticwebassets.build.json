@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vIdeJNil5jyzGM/sq7MLGIrMZWGBwU/HaJ4Z3ICIyYo=",
+  "Hash": "0WYSAtaeRaSnRkbDVEv7Q1rK3Z9jyVAwKNZjEnJDfpU=",
   "Source": "MadeInCanadaForum",
   "BasePath": "_content/MadeInCanadaForum",
   "Mode": "Default",
@@ -4320,6 +4320,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\photos\\7dd15815-4382-43ee-9115-18c4ed1b6234.webp"
+    },
+    {
+      "Identity": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "SourceId": "MadeInCanadaForum",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\",
+      "BasePath": "_content/MadeInCanadaForum",
+      "RelativePath": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k24wvh9i1z",
+      "Integrity": "nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photos\\9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg"
     },
     {
       "Identity": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\a9fb5e13-ecaf-45d8-88d6-239cbc7fdb40.webp",
@@ -36954,6 +36975,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-FOZEPMBERjJdWnjdnxIrqkDpY8lEzrlasUr2UFVxx3o="
+        }
+      ]
+    },
+    {
+      "Route": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1225558"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 00:01:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU="
+        }
+      ]
+    },
+    {
+      "Route": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.k24wvh9i1z.jpg",
+      "AssetFile": "C:\\0_Github\\MadeInCanadaForum\\MadeInCanadaForum\\MadeInCanadaForum\\wwwroot\\photos\\9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1225558"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Mar 2025 00:01:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k24wvh9i1z"
+        },
+        {
+          "Name": "label",
+          "Value": "photos/9fb6ea33-cdb6-426e-b371-cfb3cc88c0db.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nE970/skt00vv+61JQMM/P2pjHu4ItodGi4oLoNeKeU="
         }
       ]
     },

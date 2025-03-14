@@ -27,5 +27,17 @@ namespace MadeInCanadaForum.Models
         // Voting
         public int UpVotes { get; set; }
         public int DownVotes { get; set; }
+        public List<CommentVote> Votes { get; set; } = new List<CommentVote>();
+    }
+
+    public class CommentVote
+    {
+        public int CommentVoteId { get; set; }
+        public int CommentId { get; set; }
+        public string UserId { get; set; } = string.Empty;
+        public bool IsUpvote { get; set; }
+        
+        // Navigation property
+        public Comment? Comment { get; set; }
     }
 }

@@ -154,19 +154,64 @@ namespace MadeInCanadaForum.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Vote(int id, bool isUpvote)
         {
-            var comment = await _context.Comment.FindAsync(id);
+            var userId = _userManager.GetUserId(User);
+            if (userId == null)
+            {
+                return Unauthorized();
+            }
+
+            var comment = await _context.Comment
+                .Include(c => c.Votes)
+                .FirstOrDefaultAsync(c => c.CommentId == id);
+
             if (comment == null)
             {
                 return NotFound();
             }
 
-            if (isUpvote)
+            // Check if user has already voted
+            var existingVote = comment.Votes.FirstOrDefault(v => v.UserId == userId);
+            if (existingVote != null)
             {
-                comment.UpVotes++;
+                // If trying to vote the same way, remove the vote
+                if (existingVote.IsUpvote == isUpvote)
+                {
+                    comment.Votes.Remove(existingVote);
+                    if (isUpvote)
+                        comment.UpVotes--;
+                    else
+                        comment.DownVotes--;
+                }
+                // If changing vote direction
+                else
+                {
+                    existingVote.IsUpvote = isUpvote;
+                    if (isUpvote)
+                    {
+                        comment.UpVotes++;
+                        comment.DownVotes--;
+                    }
+                    else
+                    {
+                        comment.DownVotes++;
+                        comment.UpVotes--;
+                    }
+                }
             }
+            // New vote
             else
             {
-                comment.DownVotes++;
+                comment.Votes.Add(new CommentVote
+                {
+                    CommentId = id,
+                    UserId = userId,
+                    IsUpvote = isUpvote
+                });
+
+                if (isUpvote)
+                    comment.UpVotes++;
+                else
+                    comment.DownVotes++;
             }
 
             await _context.SaveChangesAsync();

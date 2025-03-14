@@ -17,6 +17,7 @@ namespace MadeInCanadaForum.Data
 
         public DbSet<MadeInCanadaForum.Models.Discussion> Discussion { get; set; } = default!;
         public DbSet<MadeInCanadaForum.Models.Comment> Comment { get; set; } = default!;
+        public DbSet<MadeInCanadaForum.Models.CommentVote> CommentVote { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +34,16 @@ namespace MadeInCanadaForum.Data
                 .WithMany(d => d.Comments)
                 .HasForeignKey(c => c.DiscussionId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CommentVote>()
+                .HasOne(v => v.Comment)
+                .WithMany(c => c.Votes)
+                .HasForeignKey(v => v.CommentId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CommentVote>()
+                .HasIndex(v => new { v.CommentId, v.UserId })
+                .IsUnique();
         }
     }
 }

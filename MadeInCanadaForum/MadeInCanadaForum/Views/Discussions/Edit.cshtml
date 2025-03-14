@@ -12,6 +12,7 @@
         <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="DiscussionId" />
+            <input type="hidden" asp-for="CreateDate" />
 
             <div class="mb-3">
                 <label asp-for="Title" class="control-label"></label>
@@ -21,7 +22,7 @@
 
             <div class="mb-3">
                 <label asp-for="Content" class="control-label"></label>
-                <input asp-for="Content" class="form-control" />
+                <textarea asp-for="Content" class="form-control" rows="3"></textarea>
                 <span asp-validation-for="Content" class="text-danger"></span>
             </div>
 
@@ -29,98 +30,14 @@
                 <label asp-for="ImageFile" class="control-label"></label>
                 <input asp-for="ImageFile" type="file" class="form-control" />
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
-                public class EditModel : PageModel
-                {
-                    private readonly ApplicationDbContext _context;
-
-                    public EditModel(ApplicationDbContext context)
-                    {
-                        _context = context;
-                    }
-
-                    [BindProperty]
-                    public Discussion Discussion { get; set; }
-
-                    [BindProperty]
-                    public IFormFile ImageFile { get; set; }
-
-                    public async Task<IActionResult> OnGetAsync(int? id)
-                    {
-                        if (id == null)
-                        {
-                            return NotFound();
-                        }
-
-                        Discussion = await _context.Discussions.FindAsync(id);
-
-                        if (Discussion == null)
-                        {
-                            return NotFound();
-                        }
-                        return Page();
-                    }
-
-                    public async Task<IActionResult> OnPostAsync()
-                    {
-                        if (!ModelState.IsValid)
-                        {
-                            return Page();
-                        }
-
-                        if (ImageFile != null && ImageFile.Length > 0)
-                        {
-                            var filePath = Path.Combine("wwwroot/images", ImageFile.FileName);
-
-                            using (var stream = new FileStream(filePath, FileMode.Create))
-                            {
-                                await ImageFile.CopyToAsync(stream);
-                            }
-
-                            Discussion.ImagePath = "/images/" + ImageFile.FileName;
-                        }
-
-                        _context.Attach(Discussion).State = EntityState.Modified;
-
-                        try
-                        {
-                            await _context.SaveChangesAsync();
-                        }
-                        catch (DbUpdateConcurrencyException)
-                        {
-                            if (!DiscussionExists(Discussion.DiscussionId))
-                            {
-                                return NotFound();
-                            }
-                            else
-                            {
-                                throw;
-                            }
-                        }
-
-                        return RedirectToPage("./Index");
-                    }
-
-                    private bool DiscussionExists(int id)
-                    {
-                        return _context.Discussions.Any(e => e.DiscussionId == id);
-                    }
-                }
             </div>
 
-            <div class="mb-3">
-                <label asp-for="CreateDate" class="control-label"></label>
-                <input asp-for="CreateDate" class="form-control" />
-                <span asp-validation-for="CreateDate" class="text-danger"></span>
-            </div>
             <div class="mb-3">
                 <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

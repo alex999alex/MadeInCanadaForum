@@ -11,7 +11,7 @@
                 <a asp-controller="Home" asp-action="Profile" asp-route-id="@comment.ApplicationUserId" class="text-decoration-none">
                     @if (!string.IsNullOrEmpty(comment.ApplicationUser?.ImageFilename))
                     {
-                        <img src="~/images/@comment.ApplicationUser.ImageFilename" alt="Profile" class="rounded-circle" style="width: 32px; height: 32px; object-fit: cover;" />
+                        <img src="~/photos/@comment.ApplicationUser.ImageFilename" alt="Profile" class="rounded-circle" style="width: 32px; height: 32px; object-fit: cover;" />
                     }
                     else
                     {
@@ -92,7 +92,7 @@
                 <a asp-controller="Home" asp-action="Profile" asp-route-id="@Model.ApplicationUserId" class="text-decoration-none">
                     @if (!string.IsNullOrEmpty(Model.ApplicationUser?.ImageFilename))
                     {
-                        <img src="~/images/@Model.ApplicationUser.ImageFilename" alt="Profile" class="rounded-circle" style="width: 64px; height: 64px; object-fit: cover;" />
+                        <img src="~/photos/@Model.ApplicationUser.ImageFilename" alt="Profile" class="rounded-circle" style="width: 64px; height: 64px; object-fit: cover;" />
                     }
                     else
                     {
@@ -111,7 +111,7 @@
                     <p class="card-text">@Model.Content</p>
                     @if (!string.IsNullOrEmpty(Model.ImageFilename))
                     {
-                        <img src="~/images/@Model.ImageFilename" alt="Discussion Image" class="img-fluid rounded mb-3" style="max-height: 400px; width: auto;" />
+                        <img src="~/photos/@Model.ImageFilename" alt="Discussion Image" class="img-fluid rounded mb-3" style="max-height: 400px; width: auto;" />
                     }
                 </div>
             </div>

@@ -31,6 +31,7 @@ namespace MadeInCanadaForum.Controllers
             var discussions = await _context.Discussion
                 .Where(d => d.ApplicationUserId == userId)
                 .Include(d => d.ApplicationUser)
+                .Include(d => d.Comments)
                 .ToListAsync();
             return View(discussions);
         }
